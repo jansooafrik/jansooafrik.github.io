@@ -60,9 +60,6 @@ h2 em{font-style:italic;color:var(--gold)}
 .about-box{background:var(--navy);border-radius:4px;padding:3rem;border-left:4px solid var(--gold)}
 .about-quote{font-family:var(--serif);font-size:1.3rem;font-style:italic;line-height:1.65;color:rgba(255,255,255,.9);margin-bottom:1.2rem}
 .about-attr{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
-.about-list{list-style:none;margin-top:1.8rem;display:flex;flex-direction:column;gap:.8rem}
-.about-list li{font-size:.9rem;color:var(--mid);display:flex;align-items:flex-start;gap:.6rem;line-height:1.6}
-.about-list li::before{content:'';min-width:6px;height:6px;background:var(--gold);border-radius:50%;margin-top:.55rem;display:block}
 
 /* PRODUCTS */
 .products{background:var(--cream)}
@@ -76,9 +73,6 @@ h2 em{font-style:italic;color:var(--gold)}
 .prod-desc{font-size:.85rem;line-height:1.7;color:var(--mid);margin-bottom:1.2rem}
 .prod-tags{display:flex;flex-wrap:wrap;gap:.4rem}
 .prod-tag{font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,.4);padding:.25rem .6rem;border-radius:2px}
-.prod-cta{margin-top:1.5rem}
-.prod-cta a{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:2px;transition:color .2s}
-.prod-cta a:hover{color:var(--gold)}
 
 /* ZONES */
 .zones{background:var(--navy);color:#fff}
@@ -109,16 +103,6 @@ h2 em{font-style:italic;color:var(--gold)}
 .testi-name{font-size:.82rem;font-weight:600;color:var(--gold);letter-spacing:.1em;text-transform:uppercase}
 .testi-handle{font-size:.72rem;color:rgba(255,255,255,.35);margin-top:.15rem}
 
-/* WHY */
-.why{background:var(--cream)}
-.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:3rem}
-@media(max-width:900px){.why-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:500px){.why-grid{grid-template-columns:1fr}}
-.why-card{background:#fff;padding:2.2rem 1.8rem;border-top:3px solid transparent;transition:all .25s}
-.why-card:hover{border-top-color:var(--gold);box-shadow:0 8px 30px rgba(13,27,62,.08)}
-.why-n{font-family:var(--serif);font-size:2.5rem;color:var(--gold);line-height:1;margin-bottom:.8rem}
-.why-title{font-family:var(--serif);font-size:1.2rem;margin-bottom:.5rem}
-.why-text{font-size:.84rem;line-height:1.75;color:var(--mid)}
 
 /* JOIN */
 .join{background:var(--navy);color:#fff}
@@ -172,6 +156,14 @@ h2 em{font-style:italic;color:var(--gold)}
 .hours-row.closed{color:rgba(255,255,255,.3)}
 .hours-day{font-weight:600;color:rgba(255,255,255,.5);font-size:.75rem;min-width:110px}
 
+/* WA GUIDE */
+.wa-guide{background:#fff;border-radius:4px;padding:2rem;border:1px solid rgba(13,27,62,.1)}
+.wa-guide-intro{font-size:.88rem;line-height:1.75;color:var(--mid);margin-bottom:1.5rem}
+.wa-template{background:var(--cream);border-radius:4px;padding:1.4rem 1.6rem;border-left:3px solid var(--gold);display:flex;flex-direction:column;gap:.6rem}
+.wa-template-line{font-size:.88rem;line-height:1.7}
+.wa-label{font-weight:700;color:var(--navy)}
+.wa-blank{color:var(--mid);font-style:italic}
+
 /* WA FLOAT */
 .wa-float{position:fixed;bottom:1.8rem;right:1.8rem;z-index:200;background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .2s}
 .wa-float:hover{transform:scale(1.12)}
@@ -215,7 +207,7 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.2);padding:2
 <section class="hero" id="home">
   <div class="eyebrow">Nairobi, Kenya and its Metropolitan Region</div>
   <h1>Nairobi's Hygiene Partner,<br>for Every <em>Home,</em><br>Shop and Institution.</h1>
-  <p>From your neighbourhood kiosk to your office block, Jansoo Afrik delivers premium sanitary paper and hygiene consumables across Nairobi and its metropolitan region. Consistent quality, dependable supply and a team that genuinely cares about your community.</p>
+  <p>Jansoo Afrik delivers premium sanitary paper and hygiene consumables to homes, shops and institutions across Nairobi and its metropolitan region. Dependable supply, consistent quality, every order.</p>
   <div class="btns">
     <a href="#contact" class="btn btn-gold">Request a Quote</a>
     <a href="#products" class="btn btn-outline">View Products</a>
@@ -231,15 +223,7 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.2);padding:2
   <div>
     <div class="tag">Who We Are</div>
     <h2>A business built on <em>purpose</em> and precision</h2>
-    <p class="lead">Jansoo Afrik is a Nairobi based distributor of premium sanitary paper and hygiene consumables. We serve retailers, institutions and households across Dagoretti, Kiambu, Kajiado and the wider metropolitan region — with a commitment to quality, consistency and community.</p>
-    <ul class="about-list">
-      <li>Proudly operating in Nairobi, Kenya.</li>
-      <li>Sourced directly from trusted factory partners.</li>
-      <li>Every product inspected before dispatch.</li>
-      <li>Reliable delivery across multiple zones.</li>
-      <li>Flexible ordering. Start small, grow at your pace.</li>
-      <li>Community and opportunity creation at the core of our mission.</li>
-    </ul>
+    <p class="lead">Jansoo Afrik is a Nairobi based distributor of premium sanitary paper and hygiene consumables, serving retailers, institutions and households across Dagoretti, Kiambu and Kajiado. Every product is sourced from trusted factory partners and inspected before dispatch — because quality and consistency are not optional.</p>
   </div>
 </section>
 
@@ -254,7 +238,6 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.2);padding:2
       <div class="prod-name">Jumbo Roll</div>
       <p class="prod-desc">High capacity tissue rolls ideal for offices, hotels and institutions requiring consistent high volume supply.</p>
       <div class="prod-tags"><span class="prod-tag">Commercial</span><span class="prod-tag">Bulk</span></div>
-      <div class="prod-cta"><a href="#contact">Request a Quote &rarr;</a></div>
     </div>
 
     <div class="prod-card fade">
@@ -262,7 +245,6 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.2);padding:2
       <div class="prod-name">Mini Roll</div>
       <p class="prod-desc">Compact toilet tissue rolls suited for residential use and retailers stocking everyday household essentials.</p>
       <div class="prod-tags"><span class="prod-tag">Residential</span><span class="prod-tag">Retail</span></div>
-      <div class="prod-cta"><a href="#contact">Request a Quote &rarr;</a></div>
     </div>
 
     <div class="prod-card fade">
@@ -270,7 +252,6 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.2);padding:2
       <div class="prod-name">Kitchen Towel</div>
       <p class="prod-desc">Durable, absorbent kitchen paper towels for household and food service. Strong for heavy duty cleaning tasks.</p>
       <div class="prod-tags"><span class="prod-tag">Household</span><span class="prod-tag">Food Service</span></div>
-      <div class="prod-cta"><a href="#contact">Request a Quote &rarr;</a></div>
     </div>
 
     <div class="prod-card fade">
@@ -278,7 +259,6 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.2);padding:2
       <div class="prod-name">Serviettes</div>
       <p class="prod-desc">Soft, economic paper napkins designed for restaurants, fast food outlets, caterers and daily home use.</p>
       <div class="prod-tags"><span class="prod-tag">Hospitality</span><span class="prod-tag">Event Supply</span></div>
-      <div class="prod-cta"><a href="#contact">Request a Quote &rarr;</a></div>
     </div>
 
   </div>
@@ -368,34 +348,6 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.2);padding:2
   </div>
 </section>
 
-<!-- WHY CHOOSE US -->
-<section class="why" id="why">
-  <div class="tag">Why Choose Us</div>
-  <h2>Built for <em>consistency</em></h2>
-  <div class="why-grid">
-    <div class="why-card fade">
-      <div class="why-n">01</div>
-      <h3 class="why-title">Factory Pricing</h3>
-      <p class="why-text">Direct wholesale access ensuring great business margins for retailers and institutions of all sizes.</p>
-    </div>
-    <div class="why-card fade">
-      <div class="why-n">02</div>
-      <h3 class="why-title">Reliable Logistics</h3>
-      <p class="why-text">Scheduled deliveries to keep your storefront or institution continually stocked without disruption.</p>
-    </div>
-    <div class="why-card fade">
-      <div class="why-n">03</div>
-      <h3 class="why-title">Premium Grade</h3>
-      <p class="why-text">Soft, highly absorbent hygiene consumables sourced from trusted factory partners and inspected before dispatch.</p>
-    </div>
-    <div class="why-card fade">
-      <div class="why-n">04</div>
-      <h3 class="why-title">Local Support</h3>
-      <p class="why-text">Deeply invested in building lasting relationships and creating opportunity across the communities we serve.</p>
-    </div>
-  </div>
-</section>
-
 <!-- CAREERS -->
 <section class="join" id="careers">
   <div class="tag">Careers</div>
@@ -419,34 +371,16 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.2);padding:2
         </div>
       </a>
       <div class="divider-or">or fill in the form below</div>
-      <form class="cform" id="contactForm">
-        <!-- Honeypot field — hidden from real users, catches bots -->
-        <input type="text" id="c-honeypot" style="display:none;position:absolute;left:-9999px;" tabindex="-1" autocomplete="off" />
-        <div class="row2">
-          <div class="cfield">
-            <label>Your Name or Business Name</label>
-            <input type="text" id="c-name" required placeholder="e.g. Dagoretti Retailers" />
-          </div>
-          <div class="cfield">
-            <label>Phone Number</label>
-            <input type="tel" id="c-phone" required placeholder="e.g. 0722 000 000" />
-          </div>
+      <div class="wa-guide">
+        <p class="wa-guide-intro">Tap the button below to open WhatsApp. You will find a ready made order template — simply fill in your details and tap Send.</p>
+        <div class="wa-template">
+          <div class="wa-template-line"><span class="wa-label">Name / Business:</span> <span class="wa-blank">your name or business name</span></div>
+          <div class="wa-template-line"><span class="wa-label">Phone:</span> <span class="wa-blank">your phone number</span></div>
+          <div class="wa-template-line"><span class="wa-label">Product and Quantity:</span> <span class="wa-blank">e.g. 20 Jumbo Rolls</span></div>
+          <div class="wa-template-line"><span class="wa-label">Location:</span> <span class="wa-blank">your delivery location</span></div>
         </div>
-        <div class="cfield">
-          <label>What Do You Need?</label>
-          <select id="c-requirement" required>
-            <option value="">Select your supply need</option>
-            <option value="Wholesale or Retail Store Supply">Wholesale or Retail Store Supply</option>
-            <option value="Office or Institutional Bulk Order">Office or Institutional Bulk Order</option>
-            <option value="Regular Residential Supply">Regular Residential Supply</option>
-          </select>
-        </div>
-        <div class="cfield">
-          <label>Order Details or Message</label>
-          <textarea id="c-message" required placeholder="Tell us what products you need and approximate quantities..."></textarea>
-        </div>
-        <button type="submit" class="btn btn-gold" style="margin-top:1rem;width:100%;font-size:.9rem;padding:1rem;">Send via WhatsApp 💬</button>
-      </form>
+        <a href="https://wa.me/254753441871?text=Hello%20Jansoo%20Afrik!%0A%0AName%20%2F%20Business%3A%20%0APhone%3A%20%0AProduct%20and%20Quantity%3A%20%0ALocation%3A%20" class="btn btn-gold" style="display:block;text-align:center;margin-top:1.5rem;padding:1rem;font-size:.9rem;width:100%;" target="_blank">Place Order on WhatsApp 💬</a>
+      </div>
     </div>
 
     <div class="info-blocks">
@@ -511,32 +445,7 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.2);padding:2
     faders.forEach(el=>el.classList.add('in'));
   }
 
-  // CONTACT FORM — builds WhatsApp message from form fields
-  document.getElementById('contactForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    // Honeypot check — if filled, it is a bot
-    if(document.getElementById('c-honeypot').value){ return; }
-    var name = document.getElementById('c-name').value.trim();
-    var phone = document.getElementById('c-phone').value.trim();
-    var req = document.getElementById('c-requirement').value;
-    var msg = document.getElementById('c-message').value.trim();
-    if(!name || !phone || !req || !msg){
-      alert('Please fill in all fields before sending.');
-      return;
-    }
-    var text = 'Hello Jansoo Afrik!
 
-'
-      + 'Name / Business: ' + name + '
-'
-      + 'Phone: ' + phone + '
-'
-      + 'Supply Need: ' + req + '
-'
-      + 'Order Details: ' + msg;
-    var url = 'https://wa.me/254753441871?text=' + encodeURIComponent(text);
-    window.location.href = url;
-  });
 
 </script>
 
