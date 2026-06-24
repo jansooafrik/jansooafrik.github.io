@@ -12,7 +12,6 @@
   gtag('js', new Date());
   gtag('config', 'G-RDJV89JMSE');
 </script>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -142,7 +141,6 @@ h2 em{font-style:italic;color:var(--gold)}
 .jfield input::placeholder,.jfield textarea::placeholder{color:rgba(255,255,255,.3)}
 .jfield input:focus,.jfield textarea:focus,.jfield select:focus{border-color:var(--gold)}
 .jfield textarea{resize:vertical;min-height:90px}
-.recaptcha-wrap{margin-top:.5rem}
 
 /* CONTACT */
 .contact{background:var(--cream)}
@@ -422,6 +420,8 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.2);padding:2
       </a>
       <div class="divider-or">or fill in the form below</div>
       <form class="cform" id="contactForm">
+        <!-- Honeypot field — hidden from real users, catches bots -->
+        <input type="text" id="c-honeypot" style="display:none;position:absolute;left:-9999px;" tabindex="-1" autocomplete="off" />
         <div class="row2">
           <div class="cfield">
             <label>Your Name or Business Name</label>
@@ -445,10 +445,7 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.2);padding:2
           <label>Order Details or Message</label>
           <textarea id="c-message" required placeholder="Tell us what products you need and approximate quantities..."></textarea>
         </div>
-        <div class="recaptcha-wrap">
-          <div class="g-recaptcha" data-sitekey="6Lek3TAtAAAAACm00NsVir6npPu342aCX25es62K"></div>
-        </div>
-        <button type="submit" class="btn btn-navy" style="margin-top:.5rem;">Send via WhatsApp</button>
+        <button type="submit" class="btn btn-gold" style="margin-top:1rem;width:100%;font-size:.9rem;padding:1rem;">Send via WhatsApp 💬</button>
       </form>
     </div>
 
@@ -514,24 +511,31 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.2);padding:2
     faders.forEach(el=>el.classList.add('in'));
   }
 
-  // CONTACT FORM — opens WhatsApp with pre-filled message
+  // CONTACT FORM — builds WhatsApp message from form fields
   document.getElementById('contactForm').addEventListener('submit', function(e){
     e.preventDefault();
-    const rc = grecaptcha.getResponse(this.querySelector('.g-recaptcha'));
-    if(!rc){ alert('Please complete the reCAPTCHA check before submitting.'); return; }
-    const name    = document.getElementById('c-name').value.trim();
-    const phone   = document.getElementById('c-phone').value.trim();
-    const req     = document.getElementById('c-requirement').value;
-    const msg     = document.getElementById('c-message').value.trim();
-    if(!name || !phone || !req || !msg){ alert('Please fill in all required fields.'); return; }
-    const text = 'Hello Jansoo Afrik,%0A%0A'
-      + 'Name%2FBusiness%3A ' + encodeURIComponent(name) + '%0A'
-      + 'Phone%3A ' + encodeURIComponent(phone) + '%0A'
-      + 'Supply Need%3A ' + encodeURIComponent(req) + '%0A'
-      + 'Details%3A ' + encodeURIComponent(msg);
-    window.open('https://wa.me/254753441871?text=' + text, '_blank');
-    this.reset();
-    grecaptcha.reset();
+    // Honeypot check — if filled, it is a bot
+    if(document.getElementById('c-honeypot').value){ return; }
+    var name = document.getElementById('c-name').value.trim();
+    var phone = document.getElementById('c-phone').value.trim();
+    var req = document.getElementById('c-requirement').value;
+    var msg = document.getElementById('c-message').value.trim();
+    if(!name || !phone || !req || !msg){
+      alert('Please fill in all fields before sending.');
+      return;
+    }
+    var text = 'Hello Jansoo Afrik!
+
+'
+      + 'Name / Business: ' + name + '
+'
+      + 'Phone: ' + phone + '
+'
+      + 'Supply Need: ' + req + '
+'
+      + 'Order Details: ' + msg;
+    var url = 'https://wa.me/254753441871?text=' + encodeURIComponent(text);
+    window.location.href = url;
   });
 
 </script>
