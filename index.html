@@ -187,8 +187,7 @@ ul{margin:0; padding:0;}
 /* ---------- Hero ---------- */
 .hero{background:linear-gradient(180deg, var(--white), var(--paper));}
 .hero-inner{
-  max-width:var(--container); margin:0 auto; padding:3.2rem 1.25rem 3rem;
-  display:grid; grid-template-columns:1.3fr .7fr; gap:2.5rem; align-items:center;
+  max-width:800px; margin:0 auto; padding:3.2rem 1.25rem 3rem;
 }
 .hero-lead{color:var(--ink-soft); font-size:1.05rem; max-width:46ch;}
 .hero-actions{display:flex; flex-wrap:wrap; gap:.85rem; margin:1.4rem 0 1.2rem;}
@@ -200,19 +199,7 @@ ul{margin:0; padding:0;}
 .hero-meta{border-top:1px dashed var(--line); padding-top:1rem;}
 .hero-note{font-size:.88rem; color:var(--ink-soft); margin-bottom:.4rem;}
 
-.hero-visual{display:flex; align-items:center; justify-content:center;}
-.hero-photos{display:grid; grid-template-columns:1.1fr .9fr; gap:.8rem; align-items:end; max-width:380px;}
-.hero-photos img{
-  width:100%; height:100%; object-fit:cover; border-radius:var(--radius-lg);
-  border:1px solid var(--line); box-shadow:var(--shadow-md);
-}
-.hero-photo-tall{aspect-ratio:3/4;}
-.hero-photo-short{aspect-ratio:1/1; margin-bottom:2rem;}
-@media (max-width: 860px){
-  .hero-inner{grid-template-columns:1fr; text-align:left;}
-  .hero-visual{order:-1;}
-  .hero-photos{max-width:100%;}
-}
+
 
 /* ---------- Sections ---------- */
 .section{padding:3.4rem 0;}
@@ -460,6 +447,553 @@ ul{margin:0; padding:0;}
         </div>
       </div>
 
-      <div class="hero-visual">
-        <div class="hero-photos">
-          <img class="hero-photo-tall" src="data:image/jpeg;base64,/9j/4AAQSkZJ
+    </div>
+    <div class="perforation" aria-hidden="true"></div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="section" id="products">
+    <div class="section-inner">
+      <p class="eyebrow">What we supply</p>
+      <h2>Products</h2>
+
+      <div class="product-grid">
+
+        <article class="product-card">
+          <h3>Mini Rolls</h3>
+          <p class="product-desc">Everyday toilet tissue for households, shops and retailers.</p>
+          <p class="product-price"><span class="price">KSh 660</span> <span class="price-for">for 30 rolls</span></p>
+          <p class="product-rate">≈ KSh 22 / roll at bulk rate</p>
+          <p class="product-moq">Bulk MOQ: 30 rolls</p>
+          <a href="#" class="btn btn-small btn-outline" data-wa-template="bulk" data-product="mini">Inquire</a>
+        </article>
+
+        <article class="product-card">
+          <h3>Jumbo Rolls</h3>
+          <p class="product-desc">High-capacity tissue rolls for offices, hotels, restaurants and institutions.</p>
+          <p class="product-price"><span class="price">KSh 1,080</span> <span class="price-for">for 12 rolls</span></p>
+          <p class="product-rate">≈ KSh 90 / roll at bulk rate</p>
+          <p class="product-moq">Bulk MOQ: 12 rolls</p>
+          <a href="#" class="btn btn-small btn-outline" data-wa-template="bulk" data-product="jumbo">Inquire</a>
+        </article>
+
+        <article class="product-card">
+          <h3>Kitchen Towels</h3>
+          <p class="product-desc">Kitchen paper towels for household, food-service and institutional use.</p>
+          <p class="product-price"><span class="price">KSh 850</span> <span class="price-for">for 10 rolls</span></p>
+          <p class="product-rate">≈ KSh 85 / roll at bulk rate</p>
+          <p class="product-moq">Bulk MOQ: 10 rolls</p>
+          <a href="#" class="btn btn-small btn-outline" data-wa-template="bulk" data-product="kitchen">Inquire</a>
+        </article>
+
+        <article class="product-card">
+          <h3>Serviettes</h3>
+          <p class="product-desc">Paper napkins for homes, restaurants, caterers and food-service businesses.</p>
+          <p class="product-price"><span class="price">KSh 540</span> <span class="price-for">for 6 packs</span></p>
+          <p class="product-rate">≈ KSh 90 / pack at bulk rate</p>
+          <p class="product-moq">Bulk MOQ: 6 packs</p>
+          <a href="#" class="btn btn-small btn-outline" data-wa-template="bulk" data-product="serviettes">Inquire</a>
+        </article>
+
+      </div>
+
+      <p class="fine-print">Prices shown are for the stated minimum bulk quantities and exclude delivery charges. Larger orders may qualify for additional discounts, subject to confirmation.</p>
+      <p class="fine-print">Households can order practical quantities. The listed MOQs apply to reseller and institutional bulk pricing.</p>
+
+      <!-- ESTIMATOR -->
+      <div class="estimator-wrap" id="estimator">
+        <details class="estimator-details">
+          <summary class="estimator-summary">
+            <span>Estimate a Bulk Order</span>
+            <svg class="chev" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+          </summary>
+
+          <div class="estimator-body">
+            <div class="estimator-field">
+              <label for="estProduct">Product</label>
+              <select id="estProduct">
+                <option value="mini">Mini Rolls</option>
+                <option value="jumbo">Jumbo Rolls</option>
+                <option value="kitchen">Kitchen Towels</option>
+                <option value="serviettes">Serviettes</option>
+              </select>
+            </div>
+
+            <div class="estimator-field">
+              <label for="estCustomerType">Customer type</label>
+              <select id="estCustomerType">
+                <option value="Household">Household</option>
+                <option value="Shop/Retailer">Shop/Retailer</option>
+                <option value="Reseller">Reseller</option>
+                <option value="School">School</option>
+                <option value="Office">Office</option>
+                <option value="Hotel">Hotel</option>
+                <option value="Restaurant">Restaurant</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="estimator-field">
+              <label for="estQuantity">Quantity</label>
+              <input type="number" id="estQuantity" min="1" step="1" value="30" inputmode="numeric">
+            </div>
+
+            <div class="estimator-field">
+              <label for="estLocation">Delivery location</label>
+              <input type="text" id="estLocation" placeholder="e.g. Dagoretti, Kawangware, Kikuyu&hellip;">
+            </div>
+
+            <div class="receipt" id="estReceipt" aria-live="polite">
+              <div class="receipt-row"><span>Product</span><span id="rProduct">&mdash;</span></div>
+              <div class="receipt-row"><span>Quantity</span><span id="rQuantity">&mdash;</span></div>
+              <div class="receipt-row"><span>Effective rate</span><span id="rRate">&mdash;</span></div>
+              <div class="receipt-row receipt-total"><span>Estimated subtotal</span><span id="rSubtotal">&mdash;</span></div>
+              <div class="receipt-row"><span>Delivery</span><span>To be confirmed</span></div>
+              <p class="receipt-moq" id="rMoqNote"></p>
+              <div class="receipt-teeth" aria-hidden="true"></div>
+            </div>
+
+            <p class="fine-print estimator-disclaimer">This is an estimate based on the current starting bulk rate. Final pricing, availability, delivery charges and any additional volume discount must be confirmed with Jansoo Afrik.</p>
+
+            <a href="#" class="btn btn-gold" id="estWaBtn">Send Estimate on WhatsApp</a>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="perforation" aria-hidden="true"></div>
+
+  <!-- HOW CAN WE HELP -->
+  <section class="section section-sage" id="help">
+    <div class="section-inner">
+      <p class="eyebrow">Find your path</p>
+      <h2>How Can We Help?</h2>
+
+      <div class="help-grid">
+        <article class="help-card">
+          <h3>Household Order</h3>
+          <p>Order a quantity that suits your home. Contact us to confirm availability and delivery arrangements.</p>
+          <p class="help-rule">The reseller and institutional bulk-pricing MOQ does not apply to households.</p>
+          <a href="#" class="btn btn-outline" data-wa-template="household">Order for My Household</a>
+        </article>
+
+        <article class="help-card">
+          <h3>Reseller or Shop</h3>
+          <p>Meet the product MOQ to access bulk pricing for resale and regular stock replenishment.</p>
+          <a href="#estimator" class="btn btn-outline">Request Bulk Pricing</a>
+        </article>
+
+        <article class="help-card">
+          <h3>School, Office, Hotel or Restaurant</h3>
+          <p>Tell us what you need and request a quote based on product, quantity and location.</p>
+          <a href="#" class="btn btn-outline" data-wa-template="bulk">Request a Quote</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="perforation" aria-hidden="true"></div>
+
+  <!-- WHY CHOOSE US -->
+  <section class="section" id="why">
+    <div class="section-inner">
+      <p class="eyebrow">Working with us</p>
+      <h2>Why Choose Jansoo Afrik?</h2>
+
+      <div class="why-grid">
+        <details class="why-card">
+          <summary>
+            <h3>Flexible Starting Quantities</h3>
+            <p>Practical entry points for new and growing resellers.</p>
+          </summary>
+          <p class="why-expanded">We support new and growing resellers with practical starting quantities, helping them begin without committing to more stock than their business can handle.</p>
+        </details>
+
+        <details class="why-card">
+          <summary>
+            <h3>Business Guidance</h3>
+            <p>More than products&mdash;we share practical sanitary-paper business knowledge.</p>
+          </summary>
+          <p class="why-expanded">We help informal and emerging resellers understand product selection, margins, stock planning and shelf-life awareness.</p>
+        </details>
+
+        <details class="why-card">
+          <summary>
+            <h3>Arranged Delivery Support</h3>
+            <p>Can&rsquo;t make it to our premises? We help arrange delivery.</p>
+          </summary>
+          <p class="why-expanded">We coordinate with available local riders and help your order reach you without the stress of arranging transport yourself. Rider availability, charges and timing are confirmed based on location and order.</p>
+          <a href="#" class="btn btn-small btn-outline" data-wa-template="delivery">Arrange My Delivery</a>
+        </details>
+
+        <details class="why-card">
+          <summary>
+            <h3>Growing With Our Community</h3>
+            <p>Supporting local enterprise and hygiene initiatives where possible.</p>
+          </summary>
+          <p class="why-expanded">We contribute sanitary paper products and support hygiene-related courses or community initiatives through local NGOs where possible.</p>
+        </details>
+      </div>
+
+      <div class="delivery-notes">
+        <p>For deliveries within Dagoretti, orders placed by 3:30 p.m. can be arranged for delivery between 10:00 a.m. and 4:30 p.m.</p>
+        <p>We welcome orders from across Nairobi and nearby areas. Delivery arrangements, charges and timing are confirmed based on the customer&rsquo;s location and order.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="perforation" aria-hidden="true"></div>
+
+  <!-- RESELLER KNOWLEDGE -->
+  <section class="section section-compact" id="knowledge">
+    <div class="section-inner">
+      <p class="eyebrow">Learning centre</p>
+      <h2 class="h3-size">Reseller Knowledge</h2>
+      <p class="knowledge-intro">Starting or growing a sanitary-paper business? Explore practical guidance on margins, pricing and stock movement.</p>
+      <ul class="knowledge-links">
+        <li><a href="margin-guide.html">How to Calculate Your Sanitary Paper Reselling Margin &rarr;</a></li>
+        <li><a href="inventory-tips.html">5 Practical Ways to Improve Stock Turnover &rarr;</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- REVIEWS + CONTACT -->
+  <section class="section section-dark" id="reviews">
+    <div class="section-inner">
+      <p class="eyebrow eyebrow-light">What Our Customers Say</p>
+
+      <blockquote class="testimonial">
+        <p>&ldquo;If you are in the Dagoretti zones and looking for a reliable hygiene partner, Jansoo Afrik is the place to go. Their customer service is welcoming and professional, making the wholesale process seamless. What I appreciate most is their social impact &mdash; high quality products at prices that are actually affordable for residents. Truly a business with a heart for the Nairobi community.&rdquo;</p>
+        <footer>
+          <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="rating-label">5.0 on Google</span>
+          <cite>Vic &mdash; Dagoretti Zone Customer <span class="review-label">(Verified Google Review)</span></cite>
+        </footer>
+      </blockquote>
+
+      <!-- Editable Google review links. Primary link is used below; the secondary link is kept for reference only and is not used automatically until its purpose is confirmed. -->
+      <!-- SECONDARY_REVIEW_LINK (not in use): https://share.google/h2BJE0CmsIVS0JF6V -->
+      <a class="btn btn-gold" href="https://share.google/9RMhAJ2K7Horli2F1" target="_blank" rel="noopener noreferrer">See More of Our Reviews on Google</a>
+
+      <div class="contact-block" id="contact">
+        <h2 class="h3-size">Contact Jansoo Afrik</h2>
+        <div class="contact-actions">
+          <a class="btn btn-gold" href="#" data-wa-template="bulk">Order on WhatsApp</a>
+          <a class="btn btn-outline btn-outline-light" href="tel:+254753441871">Call 0753 441 871</a>
+          <a class="btn btn-outline btn-outline-light" href="mailto:jansooafrik@gmail.com">Send an Email</a>
+        </div>
+
+        <form class="inquiry-form" id="inquiryForm" novalidate>
+          <div class="form-row">
+            <label for="fName">Name or business name</label>
+            <input type="text" id="fName" name="fName" required>
+          </div>
+          <div class="form-row">
+            <label for="fPhone">Phone number</label>
+            <input type="tel" id="fPhone" name="fPhone" required>
+          </div>
+          <div class="form-row">
+            <label for="fType">Customer type</label>
+            <select id="fType" name="fType" required>
+              <option value="">Select&hellip;</option>
+              <option>Household</option>
+              <option>Shop/Retailer</option>
+              <option>Reseller</option>
+              <option>School</option>
+              <option>Office</option>
+              <option>Hotel</option>
+              <option>Restaurant</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="fProduct">Product or service needed</label>
+            <input type="text" id="fProduct" name="fProduct" required>
+          </div>
+          <div class="form-row">
+            <label for="fQuantity">Quantity</label>
+            <input type="text" id="fQuantity" name="fQuantity" required>
+          </div>
+          <div class="form-row">
+            <label for="fLocation">Delivery location</label>
+            <input type="text" id="fLocation" name="fLocation" required>
+          </div>
+          <div class="form-row">
+            <label for="fMessage">Message</label>
+            <textarea id="fMessage" name="fMessage" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold form-submit">Send Inquiry on WhatsApp</button>
+          <p class="form-fallback">Prefer email? Send your details to <a href="mailto:jansooafrik@gmail.com">jansooafrik@gmail.com</a>.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-text">Jansoo Afrik</span>
+      <p>Sanitary paper and hygiene supplies for homes, shops and institutions across Nairobi and surrounding areas.</p>
+    </div>
+    <div class="footer-contact">
+      <a href="tel:+254753441871">0753 441 871</a>
+      <a href="mailto:jansooafrik@gmail.com">jansooafrik@gmail.com</a>
+      <span>Dagoretti, Nairobi, Kenya</span>
+    </div>
+    <div class="footer-actions">
+      <a class="btn btn-small btn-gold" href="#" data-wa-template="bulk">WhatsApp</a>
+      <a class="btn btn-small btn-outline btn-outline-light" href="tel:+254753441871">Call</a>
+      <a class="footer-link" href="#knowledge">Reseller Guides</a>
+    </div>
+  </div>
+  <p class="footer-copy">&copy; <span id="year"></span> Jansoo Afrik. All rights reserved.</p>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  /* =========================================================
+     CONFIG — edit these to update contact details / links
+     ========================================================= */
+  var WHATSAPP_NUMBER = "254753441871"; // international format, no +, no leading 0
+  var EMAIL = "jansooafrik@gmail.com";
+
+  /* =========================================================
+     PRODUCT PRICING DATA
+     "discountTiers" is reserved for future confirmed volume
+     discounts. Each tier can look like:
+       { minQty: 100, discountPercent: 5 }
+     Leave empty until a discount is confirmed by the business.
+     ========================================================= */
+  var PRODUCTS = {
+    mini: { name: "Mini Rolls", baseQty: 30, basePrice: 660, rate: 22, unit: "rolls", moq: 30, discountTiers: [] },
+    jumbo: { name: "Jumbo Rolls", baseQty: 12, basePrice: 1080, rate: 90, unit: "rolls", moq: 12, discountTiers: [] },
+    kitchen: { name: "Kitchen Towels", baseQty: 10, basePrice: 850, rate: 85, unit: "rolls", moq: 10, discountTiers: [] },
+    serviettes: { name: "Serviettes", baseQty: 6, basePrice: 540, rate: 90, unit: "packs", moq: 6, discountTiers: [] }
+  };
+
+  /* =========================================================
+     WHATSAPP MESSAGE TEMPLATES
+     ========================================================= */
+  var WA_TEMPLATES = {
+    household: "Hello Jansoo Afrik. I would like to order a practical quantity for my household. My name is ____. I need ____ in the quantity of ____. My location is ____. Please confirm availability and delivery arrangements.",
+    bulk: "Hello Jansoo Afrik. I would like to request bulk pricing. Business name: ____. Customer type: ____. Product: ____. Quantity: ____. Delivery location: ____. Please confirm the price and availability.",
+    delivery: "Hello Jansoo Afrik. I would like help arranging delivery. My name is ____. My order is ____. My location is ____. Please help me confirm rider availability, delivery cost and timing."
+  };
+
+  function waLink(message) {
+    return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
+  }
+
+  function formatKsh(amount) {
+    return "KSh " + Math.round(amount).toLocaleString("en-KE");
+  }
+
+  /* Apply any confirmed discount tiers to a subtotal (currently none). */
+  function applyDiscountTiers(product, quantity, subtotal) {
+    var tiers = product.discountTiers || [];
+    var best = null;
+    for (var i = 0; i < tiers.length; i++) {
+      if (quantity >= tiers[i].minQty) {
+        if (!best || tiers[i].minQty > best.minQty) best = tiers[i];
+      }
+    }
+    if (!best) return { subtotal: subtotal, appliedTier: null };
+    var discounted = subtotal - (subtotal * best.discountPercent / 100);
+    return { subtotal: discounted, appliedTier: best };
+  }
+
+  /* =========================================================
+     Static WhatsApp CTAs — every element with data-wa-template
+     ========================================================= */
+  function wireStaticWaButtons() {
+    var els = document.querySelectorAll("[data-wa-template]");
+    els.forEach(function (el) {
+      var key = el.getAttribute("data-wa-template");
+      var template = WA_TEMPLATES[key];
+      if (!template) return;
+      el.setAttribute("href", waLink(template));
+      el.setAttribute("target", "_blank");
+      el.setAttribute("rel", "noopener noreferrer");
+    });
+  }
+
+  /* =========================================================
+     Mobile nav
+     ========================================================= */
+  function wireNav() {
+    var toggle = document.getElementById("navToggle");
+    var nav = document.getElementById("primaryNav");
+    if (!toggle || !nav) return;
+
+    function closeNav() {
+      nav.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Open menu");
+    }
+    function openNav() {
+      nav.classList.add("open");
+      toggle.setAttribute("aria-expanded", "true");
+      toggle.setAttribute("aria-label", "Close menu");
+    }
+
+    toggle.addEventListener("click", function () {
+      var isOpen = nav.classList.contains("open");
+      if (isOpen) closeNav(); else openNav();
+    });
+
+    nav.querySelectorAll(".nav-link").forEach(function (link) {
+      link.addEventListener("click", closeNav);
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && nav.classList.contains("open")) {
+        closeNav();
+        toggle.focus();
+      }
+    });
+
+    /* Close menu automatically if the viewport grows past mobile size */
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 860) closeNav();
+    });
+  }
+
+  /* =========================================================
+     Bulk Order Estimator
+     ========================================================= */
+  function wireEstimator() {
+    var productSel = document.getElementById("estProduct");
+    var typeSel = document.getElementById("estCustomerType");
+    var qtyInput = document.getElementById("estQuantity");
+    var locationInput = document.getElementById("estLocation");
+    var waBtn = document.getElementById("estWaBtn");
+
+    var rProduct = document.getElementById("rProduct");
+    var rQuantity = document.getElementById("rQuantity");
+    var rRate = document.getElementById("rRate");
+    var rSubtotal = document.getElementById("rSubtotal");
+    var rMoqNote = document.getElementById("rMoqNote");
+
+    if (!productSel || !waBtn) return;
+
+    function recalc() {
+      var key = productSel.value;
+      var product = PRODUCTS[key];
+      var customerType = typeSel.value;
+      var quantity = parseInt(qtyInput.value, 10);
+      if (isNaN(quantity) || quantity < 1) quantity = 0;
+      var location = locationInput.value.trim();
+
+      var rawSubtotal = quantity * product.rate;
+      var result = applyDiscountTiers(product, quantity, rawSubtotal);
+      var subtotal = result.subtotal;
+
+      var isHousehold = customerType === "Household";
+      var meetsMoq = quantity >= product.moq;
+
+      rProduct.textContent = product.name;
+      rQuantity.textContent = quantity + " " + product.unit;
+      rRate.textContent = formatKsh(product.rate) + " / " + product.unit.replace(/s$/, "");
+      rSubtotal.textContent = formatKsh(subtotal) + " before delivery";
+
+      if (isHousehold) {
+        rMoqNote.textContent = "Households can order practical quantities. Contact us to confirm household pricing and delivery arrangements.";
+      } else if (!meetsMoq) {
+        rMoqNote.textContent = "This quantity is below the reseller/institutional bulk-pricing MOQ. Contact Jansoo Afrik to confirm availability and pricing.";
+      } else {
+        rMoqNote.textContent = "This quantity meets the reseller/institutional bulk-pricing MOQ (" + product.moq + " " + product.unit + ").";
+      }
+
+      var message = "Hello Jansoo Afrik. I would like to request an estimate.\n" +
+        "Customer type: " + (customerType || "____") + "\n" +
+        "Product: " + product.name + "\n" +
+        "Quantity: " + quantity + " " + product.unit + "\n" +
+        "Effective rate: " + formatKsh(product.rate) + " per " + product.unit.replace(/s$/, "") + "\n" +
+        "Estimated subtotal: " + formatKsh(subtotal) + " (before delivery)\n" +
+        "Delivery location: " + (location || "____") + "\n" +
+        "Please confirm the final quote, availability and delivery charges.";
+
+      waBtn.setAttribute("href", waLink(message));
+      waBtn.setAttribute("target", "_blank");
+      waBtn.setAttribute("rel", "noopener noreferrer");
+    }
+
+    [productSel, typeSel, qtyInput, locationInput].forEach(function (el) {
+      el.addEventListener("input", recalc);
+      el.addEventListener("change", recalc);
+    });
+
+    /* Pre-select product if a card's Inquire link opened the estimator via hash + data-product */
+    document.querySelectorAll("[data-product]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var details = document.querySelector(".estimator-details");
+        var p = btn.getAttribute("data-product");
+        if (PRODUCTS[p] && productSel) {
+          productSel.value = p;
+        }
+      });
+    });
+
+    recalc();
+  }
+
+  /* =========================================================
+     Inquiry form → WhatsApp
+     ========================================================= */
+  function wireForm() {
+    var form = document.getElementById("inquiryForm");
+    if (!form) return;
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      var name = document.getElementById("fName").value.trim();
+      var phone = document.getElementById("fPhone").value.trim();
+      var type = document.getElementById("fType").value;
+      var product = document.getElementById("fProduct").value.trim();
+      var quantity = document.getElementById("fQuantity").value.trim();
+      var location = document.getElementById("fLocation").value.trim();
+      var message = document.getElementById("fMessage").value.trim();
+
+      if (!name || !phone || !type || !product || !quantity || !location) {
+        form.reportValidity();
+        return;
+      }
+
+      var text = "Hello Jansoo Afrik. I would like to make an inquiry.\n" +
+        "Name/Business: " + name + "\n" +
+        "Phone: " + phone + "\n" +
+        "Customer type: " + type + "\n" +
+        "Product/service: " + product + "\n" +
+        "Quantity: " + quantity + "\n" +
+        "Delivery location: " + location +
+        (message ? "\nMessage: " + message : "") +
+        "\nPlease confirm availability and pricing.";
+
+      window.open(waLink(text), "_blank", "noopener,noreferrer");
+    });
+  }
+
+  function setFooterYear() {
+    var yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    wireStaticWaButtons();
+    wireNav();
+    wireEstimator();
+    wireForm();
+    setFooterYear();
+  });
+})();
+
+</script>
+</body>
+</html>
