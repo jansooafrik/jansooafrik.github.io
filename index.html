@@ -3,24 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jansoo Afrik | Sanitary Paper &amp; Hygiene Supplies in Dagoretti, Nairobi</title>
-<meta name="description" content="Jansoo Afrik supplies mini rolls, jumbo rolls, kitchen towels and serviettes to households, shops, resellers, schools, offices, hotels and restaurants in Dagoretti, Nairobi and surrounding areas.">
+<title>Jansoo Afrik | Sanitary Paper for Homes, Shops &amp; Institutions in Dagoretti, Nairobi</title>
+<meta name="description" content="Jansoo Afrik supplies mini rolls, jumbo rolls, kitchen towels and serviettes across Dagoretti and surrounding Nairobi areas. Order on WhatsApp or request bulk pricing.">
 
-<!-- Open Graph -->
-<meta property="og:title" content="Jansoo Afrik | Sanitary Paper &amp; Hygiene Supplies for Nairobi Homes and Businesses">
-<meta property="og:description" content="Mini rolls, jumbo rolls, kitchen towels and serviettes for households, retailers, resellers, schools, offices, hotels and restaurants across Dagoretti, Nairobi.">
+<meta property="og:title" content="Jansoo Afrik | Sanitary Paper for Homes, Shops and Institutions">
+<meta property="og:description" content="Mini rolls, jumbo rolls, kitchen towels and serviettes supplied across Dagoretti and surrounding Nairobi areas.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_KE">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Jansoo Afrik",
+  "description": "Nairobi-based distributor of sanitary paper and hygiene consumables for households, shops, retailers, resellers, schools, offices, hotels and restaurants.",
+  "telephone": "+254753441871",
+  "email": "jansooafrik@gmail.com",
+  "areaServed": ["Dagoretti, Nairobi, Kenya"],
+  "sameAs": ["https://share.google/9RMhAJ2K7Horli2F1"]
+}
+</script>
 
 <style>
 /* =========================================================
    Jansoo Afrik — Design Tokens
-   Edit the values below to update the site's colour palette.
    ========================================================= */
 :root {
-  /* Colour */
   --navy-900: #0B1F3A;
-  --navy-800: #122A4C;
   --navy-700: #1B3A66;
   --gold-500: #C79A3C;
   --gold-600: #A97F2A;
@@ -34,380 +43,162 @@
   --whatsapp: #21BD5A;
   --whatsapp-dark: #1a9c49;
   --focus: #C79A3C;
-
-  /* Type */
   --font-display: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
   --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-
-  /* Layout */
-  --max-width: 1140px;
+  --max-width: 1080px;
   --radius: 4px;
-  --header-height: 68px;
+  --header-height: 64px;
 }
 
-/* =========================================================
-   Reset & base
-   ========================================================= */
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: var(--header-height); }
-body {
-  margin: 0;
-  font-family: var(--font-body);
-  color: var(--ink-900);
-  background: var(--paper-50);
-  line-height: 1.55;
-  -webkit-font-smoothing: antialiased;
-}
+body { margin: 0; font-family: var(--font-body); color: var(--ink-900); background: var(--paper-50); line-height: 1.6; -webkit-font-smoothing: antialiased; }
 a { color: inherit; }
 h1, h2, h3 { font-family: var(--font-display); font-weight: 700; margin: 0 0 0.5em; letter-spacing: -0.01em; }
 p { margin: 0 0 1em; }
-ul { margin: 0; padding: 0; }
-.sr-only {
-  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
-}
-.skip-link {
-  position: absolute; left: -999px; top: 0; background: var(--navy-900); color: var(--white);
-  padding: 0.75em 1.25em; z-index: 200; border-radius: 0 0 var(--radius) 0;
-}
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.skip-link { position: absolute; left: -999px; top: 0; background: var(--navy-900); color: var(--white); padding: 0.75em 1.25em; z-index: 200; }
 .skip-link:focus { left: 0; }
-
-:focus-visible {
-  outline: 3px solid var(--focus);
-  outline-offset: 2px;
-}
-
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
 }
 
-/* =========================================================
-   Buttons
-   ========================================================= */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5em;
-  padding: 0.85em 1.5em;
-  border-radius: var(--radius);
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-decoration: none;
-  border: 1px solid transparent;
-  cursor: pointer;
-  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
-}
+/* Buttons */
+.btn { display: inline-flex; align-items: center; gap: 0.5em; padding: 0.85em 1.5em; border-radius: var(--radius); font-weight: 600; font-size: 0.95rem; text-decoration: none; border: 1px solid transparent; cursor: pointer; transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.1s ease; min-height: 44px; }
 .btn:active { transform: translateY(1px); }
-.btn-sm { padding: 0.55em 1em; font-size: 0.85rem; }
-
+.btn-sm { padding: 0.55em 1em; font-size: 0.85rem; min-height: 40px; }
 .btn-navy { background: var(--navy-900); color: var(--white); }
 .btn-navy:hover { background: var(--navy-700); }
-
 .btn-outline-navy { background: transparent; color: var(--navy-900); border-color: var(--navy-900); }
 .btn-outline-navy:hover { background: var(--navy-900); color: var(--white); }
-
 .btn-outline-light { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.6); }
 .btn-outline-light:hover { background: rgba(255,255,255,0.12); }
-
-.btn-ghost-light { background: transparent; color: var(--gold-100); border-color: transparent; text-decoration: underline; }
-.btn-ghost-light:hover { color: var(--white); }
-
 .btn-whatsapp { background: var(--whatsapp); color: var(--white); }
 .btn-whatsapp:hover { background: var(--whatsapp-dark); }
 
-/* =========================================================
-   Header
-   ========================================================= */
-.site-header {
-  position: sticky; top: 0; z-index: 100;
-  background: var(--navy-900);
-  height: var(--header-height);
-  border-bottom: 1px solid var(--navy-700);
-}
-.header-inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  height: 100%;
-  padding: 0 1.25rem;
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-}
+/* Header */
+.site-header { position: sticky; top: 0; z-index: 100; background: var(--navy-900); height: var(--header-height); border-bottom: 1px solid var(--navy-700); }
+.header-inner { max-width: var(--max-width); margin: 0 auto; height: 100%; padding: 0 1.25rem; display: flex; align-items: center; gap: 1.25rem; }
 .brand { display: flex; align-items: center; gap: 0.6em; text-decoration: none; color: var(--white); flex-shrink: 0; }
-.brand-mark {
-  width: 34px; height: 34px; border-radius: 50%;
-  background: var(--gold-500); color: var(--navy-900);
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-display); font-weight: 700; font-size: 0.85rem;
-}
-.brand-name { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; }
-
+.brand-mark { width: 32px; height: 32px; border-radius: 50%; background: var(--gold-500); color: var(--navy-900); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 700; font-size: 0.8rem; }
+.brand-name { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; }
 .main-nav { flex: 1; min-width: 0; }
-.main-nav ul { list-style: none; display: flex; gap: 1.25rem; flex-wrap: wrap; }
-.main-nav a {
-  text-decoration: none; color: var(--paper-100); font-size: 0.88rem; font-weight: 500;
-  padding: 0.4em 0; border-bottom: 2px solid transparent; white-space: nowrap;
-}
+.main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 1.5rem; }
+.main-nav a { text-decoration: none; color: var(--paper-100); font-size: 0.9rem; font-weight: 500; padding: 0.4em 0; border-bottom: 2px solid transparent; white-space: nowrap; }
 .main-nav a:hover, .main-nav a:focus-visible { border-bottom-color: var(--gold-500); }
-
-.header-actions { display: flex; align-items: center; flex-shrink: 0; }
-.header-whatsapp { white-space: nowrap; }
-
-.hamburger {
-  display: none;
-  background: none; border: none; cursor: pointer;
-  width: 40px; height: 40px; padding: 0;
-  flex-direction: column; align-items: center; justify-content: center; gap: 5px;
-  flex-shrink: 0;
-}
+.header-actions { flex-shrink: 0; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; width: 44px; height: 44px; padding: 0; flex-direction: column; align-items: center; justify-content: center; gap: 5px; flex-shrink: 0; }
 .hamburger span { display: block; width: 22px; height: 2px; background: var(--white); transition: transform 0.2s ease, opacity 0.2s ease; }
 .hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* =========================================================
-   Hero
-   ========================================================= */
-.hero {
-  position: relative;
-  background: linear-gradient(160deg, var(--navy-900) 0%, var(--navy-700) 100%);
-  color: var(--white);
-  padding: 4.5rem 1.25rem 3.5rem;
-  overflow: hidden;
-}
-/* Signature element: a folded paper corner (CSS shape, not a photo),
-   echoing Jansoo Afrik's "soft folds" brand identity direction. */
-.hero-fold {
-  position: absolute; top: 0; right: 0;
-  width: 140px; height: 140px;
-  background: var(--gold-500);
-  clip-path: polygon(100% 0, 0 0, 100% 100%);
-  opacity: 0.9;
-}
-.hero-fold::after {
-  content: "";
-  position: absolute; top: 0; right: 0;
-  width: 140px; height: 140px;
-  background: linear-gradient(225deg, rgba(0,0,0,0.18), transparent 60%);
-  clip-path: polygon(100% 0, 0 0, 100% 100%);
-}
-.hero-inner { max-width: 720px; margin: 0 auto; text-align: center; position: relative; }
-.eyebrow {
-  text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.78rem;
-  color: var(--gold-100); font-weight: 600; margin-bottom: 1em;
-}
-.hero h1 { font-size: clamp(1.9rem, 5vw, 2.9rem); line-height: 1.15; color: var(--white); }
-.hero-sub { font-size: 1.05rem; color: var(--paper-100); max-width: 560px; margin-left: auto; margin-right: auto; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 0.85rem; justify-content: center; margin: 1.75rem 0 1.5rem; }
-.hero-trust { font-size: 0.9rem; color: var(--gold-100); margin: 0; }
+/* Hero */
+.hero { position: relative; background: linear-gradient(160deg, var(--navy-900) 0%, var(--navy-700) 100%); color: var(--white); padding: 4rem 1.25rem 3rem; overflow: hidden; }
+.hero-fold { position: absolute; top: 0; right: 0; width: 120px; height: 120px; background: var(--gold-500); clip-path: polygon(100% 0, 0 0, 100% 100%); opacity: 0.9; }
+.hero-inner { max-width: 640px; margin: 0 auto; text-align: center; position: relative; }
+.hero h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); line-height: 1.18; color: var(--white); }
+.hero-sub { font-size: 1.02rem; color: var(--paper-100); max-width: 520px; margin: 0 auto 1.5rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-bottom: 1.25rem; }
+.hero-phone { font-size: 1rem; font-weight: 700; color: var(--gold-100); margin-bottom: 0.4em; }
+.hero-note { font-size: 0.85rem; color: var(--paper-100); opacity: 0.85; margin: 0; }
 
-/* Trust strip */
-.trust-strip { background: var(--gold-100); border-bottom: 1px solid var(--line); }
-.trust-strip-inner {
-  max-width: var(--max-width); margin: 0 auto; padding: 0.9rem 1.25rem;
-  display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 2rem;
-}
-.trust-strip-inner p {
-  margin: 0; font-size: 0.85rem; font-weight: 600; color: var(--navy-900);
-  display: flex; align-items: center; gap: 0.4em;
-}
-.trust-icon {
-  color: var(--gold-600); font-weight: 700;
-}
-
-/* Signature divider: a perforation line, echoing the perforated
-   edge of a paper roll — used between major sections. */
-.perforation {
-  height: 20px;
-  background:
-    radial-gradient(circle, var(--paper-50) 3px, transparent 3.5px) repeat-x;
-  background-size: 22px 20px;
-  background-position: center;
-  background-color: var(--navy-900);
-}
-
-/* =========================================================
-   Sections
-   ========================================================= */
-.section { padding: 3.5rem 1.25rem; }
+/* Sections */
+.section { padding: 3rem 1.25rem; }
 .section-tint { background: var(--paper-100); }
 .section-inner { max-width: var(--max-width); margin: 0 auto; }
-.section-inner h2 { font-size: clamp(1.5rem, 3vw, 2rem); color: var(--navy-900); }
-.section-lead { color: var(--ink-600); max-width: 640px; }
-.section-note { color: var(--ink-600); font-size: 0.92rem; }
+.section-inner h2 { font-size: clamp(1.4rem, 3vw, 1.85rem); color: var(--navy-900); text-align: center; }
+.section-note { color: var(--ink-600); font-size: 0.9rem; text-align: center; max-width: 620px; margin: 1.5rem auto 0; }
 
-/* Card grids */
-.card-grid { display: grid; gap: 1.5rem; margin-top: 1.5rem; }
-.two-col { grid-template-columns: repeat(2, 1fr); }
-.three-col { grid-template-columns: repeat(3, 1fr); }
+/* Product cards */
+.card-grid { display: grid; gap: 1.25rem; margin-top: 1.75rem; }
 .four-col { grid-template-columns: repeat(4, 1fr); }
-.one-col-center { grid-template-columns: minmax(0, 640px); justify-content: center; }
+.three-col { grid-template-columns: repeat(3, 1fr); }
+.product-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.25rem; display: flex; flex-direction: column; }
+.product-card h3 { color: var(--navy-900); font-size: 1.05rem; }
+.product-card p { font-size: 0.9rem; }
+.price { font-weight: 700; color: var(--navy-900); font-size: 1rem; margin-bottom: 0.2em; }
+.moq { color: var(--ink-600); font-size: 0.82rem; }
+.product-card .btn { margin-top: auto; align-self: flex-start; padding-top: 0.75rem; }
 
-/* Pathways / info cards (also reused for community section) */
-.path-card {
-  background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
-  padding: 1.75rem; display: flex; flex-direction: column; gap: 0.75rem;
-}
-.path-label {
-  font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: var(--navy-900);
-  margin-bottom: 0.1em;
-}
-.path-card .btn { margin-top: auto; align-self: flex-start; }
+/* Help cards */
+.help-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.5rem; display: flex; flex-direction: column; gap: 0.6rem; }
+.help-card h3 { color: var(--navy-900); font-size: 1.05rem; }
+.help-card .btn { margin-top: auto; align-self: flex-start; }
 
-/* Product cards (image-free: a typographic icon stands in for a photo) */
-.product-card {
-  background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
-  padding: 1.5rem; display: flex; flex-direction: column;
-}
-.product-card h3 { color: var(--navy-900); font-size: 1.15rem; }
-.price { font-weight: 700; color: var(--navy-900); font-size: 1.05rem; margin-bottom: 0.25em; }
-.moq { color: var(--ink-600); font-size: 0.85rem; }
-.product-actions { display: flex; flex-direction: column; gap: 0.5rem; margin-top: auto; padding-top: 0.75rem; }
+/* Why choose us — expandable cards */
+.why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-top: 1.75rem; }
+.why-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.25rem 1.5rem; }
+.why-card summary { cursor: pointer; list-style: none; font-family: var(--font-display); font-weight: 700; color: var(--navy-900); font-size: 1.05rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.why-card summary::-webkit-details-marker { display: none; }
+.why-card summary::after { content: "+"; font-size: 1.3rem; color: var(--gold-600); flex-shrink: 0; }
+.why-card[open] summary::after { content: "\2212"; }
+.why-teaser { color: var(--ink-600); font-size: 0.9rem; margin: 0.4em 0 0; }
+.why-detail { margin-top: 0.85rem; padding-top: 0.85rem; border-top: 1px solid var(--line); font-size: 0.92rem; color: var(--ink-900); }
+.why-detail p:last-child { margin-bottom: 0; }
+.why-detail .btn { margin-top: 0.75rem; }
 
-/* Benefit cards ("Why Choose Us") */
-.benefit-card {
-  background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
-  padding: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;
-}
-.benefit-card h3 { color: var(--navy-900); font-size: 1.1rem; }
-.benefit-card .btn { align-self: flex-start; margin-top: 0.5rem; }
-
-/* Table */
-.table-wrap { overflow-x: auto; margin: 1.5rem 0; }
-table { width: 100%; border-collapse: collapse; background: var(--white); }
-caption { text-align: left; }
-th, td { padding: 0.85em 1em; text-align: left; border-bottom: 1px solid var(--line); }
-thead th { background: var(--navy-900); color: var(--white); font-family: var(--font-display); }
-tbody th { font-weight: 600; color: var(--navy-900); }
-
-/* Delivery */
-.delivery-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.5rem; }
-.delivery-card h3 { color: var(--navy-900); }
-.delivery-window, .delivery-cutoff { font-weight: 700; color: var(--navy-900); margin-bottom: 0.3em; }
-
-/* Rating block */
-.rating-block-wrap { text-align: center; }
-.rating-block {
-  display: inline-flex; flex-direction: column; align-items: center; gap: 0.25rem;
-  text-decoration: none; color: var(--navy-900); margin-bottom: 0.5rem;
-}
-.stars { color: var(--gold-500); font-size: 1.6rem; letter-spacing: 0.1em; }
-
-/* Reviews */
-.review-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.75rem; display: flex; flex-direction: column; margin: 0 auto; }
+/* Reviews + contact */
+.rating-block-wrap { text-align: center; margin-top: 0.5rem; }
+.rating-block { display: inline-flex; flex-direction: column; align-items: center; gap: 0.2rem; text-decoration: none; color: var(--navy-900); }
+.stars { color: var(--gold-500); font-size: 1.5rem; letter-spacing: 0.1em; }
+.review-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.75rem; max-width: 640px; margin: 1.5rem auto 0; }
 .review-quote { font-style: italic; color: var(--ink-900); }
 .review-author { font-weight: 700; color: var(--navy-900); margin-bottom: 0; }
 .review-location { color: var(--ink-600); font-size: 0.85rem; margin-bottom: 0.5em; }
-.review-badge {
-  display: inline-block; align-self: flex-start; background: var(--gold-100); color: var(--gold-600);
-  font-size: 0.75rem; font-weight: 700; padding: 0.3em 0.7em; border-radius: 999px; text-transform: uppercase;
-  letter-spacing: 0.04em; margin-bottom: 0;
-}
-.reviews .btn { margin-top: 1.75rem; }
-#reviews > .section-inner > .btn { display: inline-flex; margin-top: 1.75rem; }
+.review-badge { display: inline-block; background: var(--gold-100); color: var(--gold-600); font-size: 0.72rem; font-weight: 700; padding: 0.3em 0.7em; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0; }
+.reviews-cta { text-align: center; margin-top: 1.5rem; }
 
-/* Form */
-.form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-top: 1.5rem; }
-.field { display: flex; flex-direction: column; gap: 0.4em; }
+.contact-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin: 2rem 0; }
+.contact-line { text-align: center; color: var(--ink-600); font-size: 0.9rem; }
+.contact-line a { text-decoration: underline; }
+
+/* Inquiry form */
+.inquiry-form-wrap { max-width: 620px; margin: 2.5rem auto 0; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.75rem; }
+.inquiry-form-wrap h3 { color: var(--navy-900); font-size: 1.15rem; text-align: center; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.25rem; }
+.field { display: flex; flex-direction: column; gap: 0.35em; }
 .field-full { grid-column: 1 / -1; }
-label { font-weight: 600; font-size: 0.9rem; color: var(--navy-900); }
-input, select, textarea {
-  font: inherit; padding: 0.7em 0.85em; border: 1px solid var(--line); border-radius: var(--radius);
-  background: var(--white); color: var(--ink-900);
-}
+label { font-weight: 600; font-size: 0.88rem; color: var(--navy-900); }
+input, select, textarea { font: inherit; padding: 0.65em 0.8em; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); color: var(--ink-900); min-height: 44px; }
+textarea { min-height: auto; }
 input:focus, select:focus, textarea:focus { border-color: var(--gold-500); }
-.form-actions { display: flex; flex-wrap: wrap; gap: 0.85rem; margin-top: 1.75rem; }
-.form-note { margin-top: 0.75rem; font-size: 0.9rem; color: var(--gold-600); min-height: 1.2em; }
+.form-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
+.form-note { margin-top: 0.65rem; font-size: 0.85rem; color: var(--gold-600); min-height: 1.2em; }
 
-/* Contact */
-.contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 1.5rem; }
-.contact-item { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.25rem; }
-.contact-item h3 { font-size: 1rem; color: var(--navy-900); }
-.contact-item a { text-decoration: underline; }
-.contact-actions { display: flex; gap: 0.85rem; margin-top: 1.75rem; flex-wrap: wrap; }
+/* Footer */
+.site-footer { background: var(--navy-900); color: var(--paper-100); padding: 2.5rem 1.25rem 1.5rem; text-align: center; }
+.footer-inner { max-width: 560px; margin: 0 auto; }
+.footer-brand { color: var(--white); font-size: 1.1rem; margin-bottom: 0.4em; }
+.footer-inner p { font-size: 0.9rem; }
+.footer-actions { display: flex; gap: 0.75rem; justify-content: center; margin: 1.25rem 0; flex-wrap: wrap; }
+.footer-bottom { margin: 1.5rem 0 0; padding-top: 1.25rem; border-top: 1px solid var(--navy-700); font-size: 0.8rem; }
 
-/* =========================================================
-   Footer
-   ========================================================= */
-.site-footer { background: var(--navy-900); color: var(--paper-100); padding: 3rem 1.25rem 1.5rem; }
-.footer-inner {
-  max-width: var(--max-width); margin: 0 auto;
-  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem;
-}
-.footer-brand { color: var(--white); font-size: 1.2rem; margin-bottom: 0.4em; }
-.footer-col h3 { color: var(--gold-100); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.75em; }
-.footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.5em; }
-.footer-links a { text-decoration: none; color: var(--paper-100); }
-.footer-links a:hover { text-decoration: underline; }
-.footer-col .btn { margin: 0 0.5em 0.5em 0; }
-.footer-bottom {
-  text-align: center; margin: 2.5rem 0 0; padding-top: 1.5rem;
-  border-top: 1px solid var(--navy-700); color: var(--paper-100); font-size: 0.85rem;
-}
-
-/* =========================================================
-   Responsive
-   ========================================================= */
-@media (max-width: 1000px) {
-  .main-nav ul { gap: 0.9rem; }
-  .main-nav a { font-size: 0.82rem; }
-}
-
+/* Responsive */
 @media (max-width: 900px) {
   .four-col { grid-template-columns: repeat(2, 1fr); }
   .three-col { grid-template-columns: 1fr; }
-  .footer-inner { grid-template-columns: repeat(2, 1fr); }
+  .why-grid { grid-template-columns: 1fr; }
 }
-
-@media (max-width: 780px) {
+@media (max-width: 720px) {
   .main-nav { display: none; }
-  .header-actions .header-whatsapp { display: none; }
   .hamburger { display: flex; }
-
-  .main-nav.open {
-    display: block;
-    position: absolute; top: var(--header-height); left: 0; right: 0;
-    background: var(--navy-900); border-top: 1px solid var(--navy-700);
-    padding: 1rem 1.25rem 1.5rem;
-    max-height: calc(100vh - var(--header-height));
-    overflow-y: auto;
-  }
+  .main-nav.open { display: block; position: absolute; top: var(--header-height); left: 0; right: 0; background: var(--navy-900); border-top: 1px solid var(--navy-700); padding: 1rem 1.25rem 1.5rem; max-height: calc(100vh - var(--header-height)); overflow-y: auto; }
   .main-nav.open ul { flex-direction: column; gap: 0; }
   .main-nav.open li { border-bottom: 1px solid var(--navy-700); }
   .main-nav.open a { display: block; padding: 0.85em 0; }
-
-  .four-col, .two-col, .contact-grid { grid-template-columns: 1fr; }
+  .four-col { grid-template-columns: 1fr; }
   .form-grid { grid-template-columns: 1fr; }
-  .footer-inner { grid-template-columns: 1fr; text-align: left; }
-  .hero { padding: 3.5rem 1.25rem 3rem; }
-  .trust-strip-inner { justify-content: flex-start; gap: 0.6rem 1.25rem; }
+  .hero { padding: 3.5rem 1.25rem 2.75rem; }
 }
-
 </style>
-
-<!-- JSON-LD LocalBusiness schema: only confirmed information is included.
-     No address, opening hours, or invented rating/review counts are added. -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Jansoo Afrik",
-  "description": "Nairobi-based distributor of sanitary paper and hygiene consumables serving households, shops, retailers, resellers, schools, offices, hotels and restaurants.",
-  "telephone": "+254753441871",
-  "email": "jansooafrik@gmail.com",
-  "areaServed": ["Dagoretti, Nairobi, Kenya"],
-  "sameAs": [
-    "https://share.google/9RMhAJ2K7Horli2F1"
-  ]
-}
-</script>
 </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to main content</a>
 
-<!-- ============ HEADER / NAVIGATION ============ -->
 <header class="site-header" id="top">
   <div class="header-inner">
     <a href="#top" class="brand">
@@ -417,22 +208,15 @@ input:focus, select:focus, textarea:focus { border-color: var(--gold-500); }
 
     <nav class="main-nav" id="main-nav" aria-label="Primary">
       <ul>
-        <li><a href="#top">Home</a></li>
         <li><a href="#products">Products</a></li>
-        <li><a href="#households">For Households</a></li>
-        <li><a href="#bulk-pricing">Bulk Pricing</a></li>
         <li><a href="#why-choose-us">Why Choose Us</a></li>
-        <li><a href="#community">Community</a></li>
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
     <div class="header-actions">
-      <a class="btn btn-whatsapp header-whatsapp" id="wa-header-btn" href="#" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm0 18.02h-.01a8.1 8.1 0 0 1-4.14-1.13l-.3-.18-3.14.82.84-3.06-.19-.31a8.13 8.13 0 0 1-1.25-4.34c0-4.49 3.66-8.15 8.16-8.15 4.49 0 8.15 3.66 8.15 8.16 0 4.49-3.66 8.19-8.12 8.19Zm4.47-6.11c-.24-.12-1.45-.72-1.68-.8-.22-.08-.39-.12-.55.12-.16.24-.63.8-.78.96-.14.16-.29.18-.53.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.11-.49.11-.11.24-.29.36-.43.12-.14.16-.24.24-.4.08-.16.04-.31-.02-.43-.06-.12-.55-1.32-.75-1.81-.2-.48-.4-.41-.55-.42-.14-.01-.31-.01-.47-.01-.16 0-.43.06-.65.31-.22.24-.86.84-.86 2.04 0 1.2.88 2.36 1 2.52.12.16 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.51.59.19 1.12.16 1.54.1.47-.07 1.45-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z"/></svg>
-        Order on WhatsApp
-      </a>
+      <a class="btn btn-whatsapp btn-sm" id="wa-header-btn" href="#" target="_blank" rel="noopener">Order on WhatsApp</a>
     </div>
 
     <button class="hamburger" id="hamburger" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu">
@@ -443,442 +227,252 @@ input:focus, select:focus, textarea:focus { border-color: var(--gold-500); }
 
 <main id="main">
 
-  <!-- ============ HERO ============ -->
+  <!-- ============ 1. HERO ============ -->
   <section class="hero" aria-label="Introduction">
     <div class="hero-fold" aria-hidden="true"></div>
     <div class="hero-inner">
-      <p class="eyebrow">Dagoretti &middot; Nairobi &middot; Kenya</p>
-      <h1>Sanitary Paper and Hygiene Supplies for Nairobi Homes and Businesses</h1>
-      <p class="hero-sub">Jansoo Afrik supplies mini rolls, jumbo rolls, kitchen towels and serviettes to households, retailers, resellers, schools, offices, hotels and restaurants.</p>
-
+      <h1>Sanitary paper for homes, shops and institutions.</h1>
+      <p class="hero-sub">Mini rolls, jumbo rolls, kitchen towels and serviettes supplied across Dagoretti and surrounding Nairobi areas.</p>
       <div class="hero-actions">
         <a class="btn btn-whatsapp" id="wa-hero-btn" href="#" target="_blank" rel="noopener">Order on WhatsApp</a>
-        <a class="btn btn-outline-light" href="#quote">Request a Quote</a>
-        <a class="btn btn-ghost-light" id="call-hero-btn" href="tel:+254753441871">Call Us: 0753 441 871</a>
+        <a class="btn btn-outline-light" id="wa-hero-bulk-btn" href="#" target="_blank" rel="noopener">Request Bulk Pricing</a>
       </div>
-
-      <p class="hero-trust">Practical hygiene supply for homes, shops and institutions across Dagoretti and surrounding Nairobi areas.</p>
+      <p class="hero-phone">0753 441 871</p>
+      <p class="hero-note">Dagoretti delivery arrangements: 10:00 a.m.&ndash;4:30 p.m. Orders by 3:30 p.m.</p>
     </div>
   </section>
 
-  <!-- ============ TRUST STRIP ============ -->
-  <div class="trust-strip" aria-label="Key facts">
-    <div class="trust-strip-inner">
-      <p><span class="trust-icon" aria-hidden="true">&#10003;</span>Household quantities available</p>
-      <p><span class="trust-icon" aria-hidden="true">&#10003;</span>Bulk pricing for resellers and institutions</p>
-      <p><span class="trust-icon" aria-hidden="true">&#10003;</span>Dagoretti delivery</p>
-      <p><span class="trust-icon" aria-hidden="true">&#10003;</span>WhatsApp and phone ordering</p>
-    </div>
-  </div>
-
-  <!-- ============ CUSTOMER PATHWAYS ============ -->
-  <section class="section pathways" aria-labelledby="pathways-heading">
+  <!-- ============ 2. PRODUCTS ============ -->
+  <section class="section" id="products" aria-labelledby="products-heading">
     <div class="section-inner">
-      <h2 id="pathways-heading">Find Your Path</h2>
-      <p class="section-lead">Every customer orders differently. Choose the option that fits how you buy.</p>
-
-      <div class="card-grid three-col">
-        <article class="path-card">
-          <p class="path-label">Households</p>
-          <p>Order a practical quantity that suits your household. Contact us to confirm availability and delivery arrangements.</p>
-          <a class="btn btn-navy" id="wa-household-path-btn" href="#" target="_blank" rel="noopener">Order for My Household</a>
-        </article>
-
-        <article class="path-card">
-          <p class="path-label">Resellers &amp; Retailers</p>
-          <p>Meet the product MOQ to access bulk pricing for resale and regular stock replenishment.</p>
-          <a class="btn btn-navy" id="wa-reseller-path-btn" href="#" target="_blank" rel="noopener">Request Reseller Pricing</a>
-        </article>
-
-        <article class="path-card">
-          <p class="path-label">Institutions &amp; Hospitality</p>
-          <p>Schools, offices, hotels and restaurants can request pricing based on product, quantity and delivery location.</p>
-          <a class="btn btn-navy" id="wa-institution-path-btn" href="#" target="_blank" rel="noopener">Request an Institutional Quote</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PRODUCT RANGE ============ -->
-  <section class="section section-tint" id="products" aria-labelledby="products-heading">
-    <div class="section-inner">
-      <h2 id="products-heading">Our Product Range</h2>
-      <p class="section-note">&ldquo;Starting from&rdquo; prices are shown because these are not necessarily universal final prices. Final pricing may depend on order quantity, customer type, delivery location and confirmed order details.</p>
+      <h2 id="products-heading">Products</h2>
 
       <div class="card-grid four-col">
-
         <article class="product-card">
           <h3>Mini Rolls</h3>
-          <p>Everyday toilet tissue suitable for households, shops and retailers.</p>
+          <p>Everyday toilet tissue for households, shops and retailers.</p>
           <p class="price">Starting from KSh 660</p>
-          <p class="moq">MOQ for bulk pricing: 30 rolls</p>
-          <div class="product-actions">
-            <a class="btn btn-outline-navy btn-sm" href="#" data-wa-product="Mini Rolls" data-wa-type="household">Household Inquiry</a>
-            <a class="btn btn-navy btn-sm" href="#" data-wa-product="Mini Rolls" data-wa-type="bulk">Bulk Pricing Inquiry</a>
-          </div>
+          <p class="moq">Bulk pricing MOQ: 30 rolls</p>
+          <a class="btn btn-outline-navy btn-sm" href="#" data-wa-product="Mini Rolls">Inquire</a>
         </article>
 
         <article class="product-card">
           <h3>Jumbo Rolls</h3>
-          <p>High-capacity tissue rolls suitable for offices, hotels, restaurants and institutions.</p>
+          <p>High-capacity tissue rolls for offices, hotels, restaurants and institutions.</p>
           <p class="price">Starting from KSh 1,080</p>
-          <p class="moq">MOQ for bulk pricing: 12 rolls</p>
-          <div class="product-actions">
-            <a class="btn btn-outline-navy btn-sm" href="#" data-wa-product="Jumbo Rolls" data-wa-type="household">Household Inquiry</a>
-            <a class="btn btn-navy btn-sm" href="#" data-wa-product="Jumbo Rolls" data-wa-type="bulk">Bulk Pricing Inquiry</a>
-          </div>
+          <p class="moq">Bulk pricing MOQ: 12 rolls</p>
+          <a class="btn btn-outline-navy btn-sm" href="#" data-wa-product="Jumbo Rolls">Inquire</a>
         </article>
 
         <article class="product-card">
           <h3>Kitchen Towels</h3>
           <p>Kitchen paper towels for household, food-service and institutional use.</p>
           <p class="price">Starting from KSh 850</p>
-          <p class="moq">MOQ for bulk pricing: 10 rolls</p>
-          <div class="product-actions">
-            <a class="btn btn-outline-navy btn-sm" href="#" data-wa-product="Kitchen Towels" data-wa-type="household">Household Inquiry</a>
-            <a class="btn btn-navy btn-sm" href="#" data-wa-product="Kitchen Towels" data-wa-type="bulk">Bulk Pricing Inquiry</a>
-          </div>
+          <p class="moq">Bulk pricing MOQ: 10 rolls</p>
+          <a class="btn btn-outline-navy btn-sm" href="#" data-wa-product="Kitchen Towels">Inquire</a>
         </article>
 
         <article class="product-card">
           <h3>Serviettes</h3>
-          <p>Paper napkins suitable for homes, restaurants, caterers and food-service businesses.</p>
+          <p>Paper napkins for homes, restaurants, caterers and food-service businesses.</p>
           <p class="price">Starting from KSh 540</p>
-          <p class="moq">MOQ for bulk pricing: 6 rolls</p>
-          <div class="product-actions">
-            <a class="btn btn-outline-navy btn-sm" href="#" data-wa-product="Serviettes" data-wa-type="household">Household Inquiry</a>
-            <a class="btn btn-navy btn-sm" href="#" data-wa-product="Serviettes" data-wa-type="bulk">Bulk Pricing Inquiry</a>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <div class="perforation" aria-hidden="true"></div>
-
-  <!-- ============ HOUSEHOLD ORDERS ============ -->
-  <section class="section" id="households" aria-labelledby="households-heading">
-    <div class="section-inner">
-      <h2 id="households-heading">Household Orders</h2>
-      <p>Households can order a practical quantity that suits their actual needs. The reseller and institutional bulk-pricing MOQ does not apply to household orders.</p>
-      <p>We encourage households near our service stations to place practical orders that fit their needs and help avoid unnecessary delivery costs.</p>
-      <p>Whether you need a small household supply or a larger order, contact us to confirm availability and delivery arrangements.</p>
-      <a class="btn btn-navy" id="wa-household-section-btn" href="#" target="_blank" rel="noopener">Order for My Household</a>
-    </div>
-  </section>
-
-  <!-- ============ BULK PRICING SECTION ============ -->
-  <section class="section section-tint" id="bulk-pricing" aria-labelledby="bulk-heading">
-    <div class="section-inner">
-      <h2 id="bulk-heading">Bulk Pricing for Resellers and Institutions</h2>
-      <p>Resellers and institutions can access Jansoo Afrik&rsquo;s bulk pricing by meeting the minimum order quantity for the product they need.</p>
-      <p class="section-note">Meet the minimum quantity for each product to enjoy Jansoo Afrik&rsquo;s bulk pricing.</p>
-
-      <div class="table-wrap">
-        <table>
-          <caption class="sr-only">Minimum order quantity required for bulk pricing, by product</caption>
-          <thead>
-            <tr>
-              <th scope="col">Product</th>
-              <th scope="col">MOQ for bulk pricing</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><th scope="row">Mini Rolls</th><td>30 rolls</td></tr>
-            <tr><th scope="row">Jumbo Rolls</th><td>12 rolls</td></tr>
-            <tr><th scope="row">Kitchen Towels</th><td>10 rolls</td></tr>
-            <tr><th scope="row">Serviettes</th><td>6 rolls</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <p class="section-note">The bulk-pricing MOQ applies to resellers and institutions. Households can order a practical quantity that suits their needs, subject to availability and delivery confirmation.</p>
-      <p class="section-note">Orders below the stated MOQ may be available at different prices. Contact Jansoo Afrik to confirm pricing and availability.</p>
-
-      <a class="btn btn-navy" id="wa-bulk-section-btn" href="#" target="_blank" rel="noopener">Request Bulk Pricing</a>
-    </div>
-  </section>
-
-  <!-- ============ DELIVERY INFORMATION ============ -->
-  <section class="section" aria-labelledby="delivery-heading">
-    <div class="section-inner">
-      <h2 id="delivery-heading">Delivery Information</h2>
-      <div class="card-grid two-col">
-        <article class="delivery-card">
-          <h3>Within Dagoretti</h3>
-          <p class="delivery-window">Dagoretti delivery window: 10:00 a.m. to 4:30 p.m.</p>
-          <p class="delivery-cutoff">Order cut-off time: 3:30 p.m.</p>
-          <p>For deliveries within Dagoretti, place your order by 3:30 p.m. for delivery arrangements between 10:00 a.m. and 4:30 p.m.</p>
-        </article>
-        <article class="delivery-card">
-          <h3>Kiambu, Kajiado &amp; Other Areas</h3>
-          <p>Delivery availability and timing for Kiambu, Kajiado and other areas should be confirmed with Jansoo Afrik before ordering.</p>
+          <p class="moq">Bulk pricing MOQ: 6 rolls</p>
+          <a class="btn btn-outline-navy btn-sm" href="#" data-wa-product="Serviettes">Inquire</a>
         </article>
       </div>
+
+      <p class="section-note">Households can order practical quantities. The listed MOQs apply to reseller and institutional bulk pricing.</p>
     </div>
   </section>
 
-  <div class="perforation" aria-hidden="true"></div>
+  <!-- ============ 3. HOW CAN WE HELP? ============ -->
+  <section class="section section-tint" aria-labelledby="help-heading">
+    <div class="section-inner">
+      <h2 id="help-heading">How Can We Help?</h2>
 
-  <!-- ============ WHY CHOOSE JANSOO AFRIK ============ -->
-  <section class="section section-tint" id="why-choose-us" aria-labelledby="why-heading">
+      <div class="card-grid three-col">
+        <article class="help-card">
+          <h3>Household order</h3>
+          <p>Order a quantity that suits your home. Contact us to confirm availability and delivery arrangements.</p>
+          <a class="btn btn-navy btn-sm" id="wa-household-btn" href="#" target="_blank" rel="noopener">Order for My Household</a>
+        </article>
+
+        <article class="help-card">
+          <h3>Reseller or shop</h3>
+          <p>Meet the product MOQ to access bulk pricing for resale and regular stock replenishment.</p>
+          <a class="btn btn-navy btn-sm" id="wa-bulk-btn" href="#" target="_blank" rel="noopener">Request Bulk Pricing</a>
+        </article>
+
+        <article class="help-card">
+          <h3>School, office, hotel or restaurant</h3>
+          <p>Tell us what you need and request a quote based on product, quantity and location.</p>
+          <a class="btn btn-navy btn-sm" id="wa-quote-btn" href="#" target="_blank" rel="noopener">Request a Quote</a>
+        </article>
+      </div>
+
+      <p class="section-note">The reseller and institutional bulk-pricing MOQ does not apply to households.</p>
+    </div>
+  </section>
+
+  <!-- ============ 4. WHY CHOOSE JANSOO AFRIK? ============ -->
+  <section class="section" id="why-choose-us" aria-labelledby="why-heading">
     <div class="section-inner">
       <h2 id="why-heading">Why Choose Jansoo Afrik?</h2>
 
-      <div class="card-grid three-col benefit-grid">
-        <article class="benefit-card">
-          <h3>Flexible Starting Quantities</h3>
-          <p>We support new and growing resellers with practical starting quantities, helping them begin without committing to more stock than their business can handle.</p>
-        </article>
+      <div class="why-grid">
+        <details class="why-card">
+          <summary>Flexible starting quantities</summary>
+          <p class="why-teaser">Practical entry points for new and growing resellers.</p>
+          <div class="why-detail">
+            <p>We support new and growing resellers with practical starting quantities, helping them begin without committing to more stock than their business can handle.</p>
+          </div>
+        </details>
 
-        <article class="benefit-card">
-          <h3>Practical Reseller Guidance</h3>
-          <p>We help informal and emerging resellers understand the sanitary-paper business&mdash;from product selection and margins to stock planning and shelf-life awareness.</p>
-        </article>
+        <details class="why-card">
+          <summary>Business guidance</summary>
+          <p class="why-teaser">More than products&mdash;we share practical sanitary-paper business knowledge.</p>
+          <div class="why-detail">
+            <p>We help informal and emerging resellers understand product selection, margins, stock planning and shelf-life awareness.</p>
+          </div>
+        </details>
 
-        <article class="benefit-card">
-          <h3>Household-Friendly Ordering</h3>
-          <p>Households can order quantities that suit their needs. The reseller and institutional bulk-pricing MOQ does not apply to household orders.</p>
-        </article>
+        <details class="why-card">
+          <summary>Arranged delivery support</summary>
+          <p class="why-teaser">Can&rsquo;t make it to our premises? We help arrange delivery.</p>
+          <div class="why-detail">
+            <p>We coordinate with available local riders and help your order reach you without the stress of arranging transport yourself. Rider availability, charges and timing are confirmed based on location and order.</p>
+            <p>Orders placed by 3:30 p.m. can be arranged for delivery between 10:00 a.m. and 4:30 p.m. within Dagoretti. Availability and timing for Kiambu, Kajiado and other areas should be confirmed before ordering.</p>
+            <a class="btn btn-outline-navy btn-sm" id="wa-delivery-btn" href="#" target="_blank" rel="noopener">Arrange My Delivery</a>
+          </div>
+        </details>
 
-        <article class="benefit-card">
-          <h3>Arranged Delivery Support</h3>
-          <p>If you cannot make it to our premises, we help arrange delivery to your location. We coordinate with available local riders, discuss the delivery details with you and help your order reach you without the stress of arranging transport yourself.</p>
-          <p class="section-note">Rider availability, delivery charges and timing are confirmed based on the customer&rsquo;s location and order.</p>
-          <a class="btn btn-outline-navy btn-sm" id="wa-arrange-delivery-btn" href="#" target="_blank" rel="noopener">Arrange My Delivery</a>
-        </article>
-
-        <article class="benefit-card">
-          <h3>Local Delivery Support</h3>
-          <p>For deliveries within Dagoretti, orders placed by 3:30 p.m. can be arranged for delivery between 10:00 a.m. and 4:30 p.m.</p>
-        </article>
+        <details class="why-card">
+          <summary>Growing with our community</summary>
+          <p class="why-teaser">Supporting local enterprise and hygiene initiatives where possible.</p>
+          <div class="why-detail">
+            <p>We contribute sanitary paper products and support hygiene-related courses or community initiatives through local NGOs where possible.</p>
+          </div>
+        </details>
       </div>
     </div>
   </section>
 
-  <!-- ============ COMMUNITY SECTION ============ -->
-  <section class="section" id="community" aria-labelledby="community-heading">
-    <div class="section-inner">
-      <h2 id="community-heading">Growing With Our Community</h2>
-      <p class="section-lead">Jansoo Afrik believes hygiene supply should create opportunity as well as meet everyday needs. We support emerging resellers with practical business knowledge and contribute sanitary paper products and hygiene-related support to local NGOs and community initiatives where possible.</p>
-
-      <div class="card-grid three-col">
-        <article class="path-card">
-          <p class="path-label">Supporting New Resellers</p>
-          <p>Helping emerging entrepreneurs understand products, margins, stock planning and the practical realities of the sanitary-paper trade.</p>
-        </article>
-
-        <article class="path-card">
-          <p class="path-label">Sharing Practical Business Knowledge</p>
-          <p>Providing guidance that many small businesses do not easily access when they are starting and building their customer base.</p>
-        </article>
-
-        <article class="path-card">
-          <p class="path-label">Supporting Hygiene Initiatives</p>
-          <p>Contributing sanitary paper products and supporting hygiene-related courses or community programmes through local NGOs where possible.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <div class="perforation" aria-hidden="true"></div>
-
-  <!-- ============ REVIEWS ============ -->
-  <section class="section section-tint" id="reviews" aria-labelledby="reviews-heading">
+  <!-- ============ 5. REVIEWS AND CONTACT ============ -->
+  <section class="section section-tint" aria-labelledby="reviews-heading">
     <div class="section-inner">
       <h2 id="reviews-heading">What Our Customers Say</h2>
 
-      <div class="rating-block-wrap">
+      <div class="rating-block-wrap" id="reviews">
         <a class="rating-block" id="google-rating-btn" href="#" target="_blank" rel="noopener">
           <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
           <span>5.0 on Google</span>
         </a>
       </div>
 
-      <div class="card-grid one-col-center">
-        <article class="review-card">
-          <p class="review-quote">&ldquo;If you are in the Dagoretti zones and looking for a reliable hygiene partner, Jansoo Afrik is the place to go. Their customer service is welcoming and professional, making the wholesale process seamless. What I appreciate most is their social impact &mdash; high quality products at prices that are actually affordable for residents. Truly a business with a heart for the Nairobi community.&rdquo;</p>
-          <p class="review-author">Vic</p>
-          <p class="review-location">Dagoretti Zone Customer</p>
-          <p class="review-badge">Verified Google Review</p>
-        </article>
-      </div>
+      <article class="review-card">
+        <p class="review-quote">&ldquo;If you are in the Dagoretti zones and looking for a reliable hygiene partner, Jansoo Afrik is the place to go. Their customer service is welcoming and professional, making the wholesale process seamless. What I appreciate most is their social impact &mdash; high quality products at prices that are actually affordable for residents. Truly a business with a heart for the Nairobi community.&rdquo;</p>
+        <p class="review-author">Vic</p>
+        <p class="review-location">Dagoretti Zone Customer</p>
+        <p class="review-badge">Verified Google Review</p>
+      </article>
 
-      <a class="btn btn-outline-navy" id="google-reviews-btn" href="#" target="_blank" rel="noopener">See More of Our Reviews on Google</a>
-    </div>
-  </section>
+      <p class="reviews-cta"><a class="btn btn-outline-navy" id="google-reviews-btn" href="#" target="_blank" rel="noopener">See More of Our Reviews on Google</a></p>
 
-  <!-- ============ QUOTE / INQUIRY FORM ============ -->
-  <section class="section" id="quote" aria-labelledby="quote-heading">
-    <div class="section-inner">
-      <h2 id="quote-heading">Request a Quote</h2>
-      <p class="section-lead">Fill in your details and we will confirm pricing, availability and delivery arrangements. This form opens WhatsApp with your details pre-filled; you can also send it by email.</p>
+      <div id="contact">
+        <div class="contact-actions">
+          <a class="btn btn-whatsapp" id="wa-contact-btn" href="#" target="_blank" rel="noopener">Order on WhatsApp</a>
+          <a class="btn btn-outline-navy" href="tel:+254753441871">Call 0753 441 871</a>
+          <a class="btn btn-outline-navy" href="mailto:jansooafrik@gmail.com">Send an Email</a>
+        </div>
+        <p class="contact-line">Dagoretti, Nairobi. Kiambu, Kajiado and surrounding areas may be served &mdash; please confirm availability. <a href="mailto:jansooafrik@gmail.com">jansooafrik@gmail.com</a></p>
 
-      <form id="quote-form" novalidate>
-        <div class="form-grid">
-          <div class="field">
-            <label for="qf-name">Name or business name</label>
-            <input type="text" id="qf-name" name="name" required autocomplete="name">
-          </div>
-          <div class="field">
-            <label for="qf-phone">Phone number</label>
-            <input type="tel" id="qf-phone" name="phone" required autocomplete="tel">
-          </div>
-          <div class="field">
-            <label for="qf-customer-type">Customer type</label>
-            <select id="qf-customer-type" name="customerType" required>
-              <option value="">Select customer type</option>
-              <option>Household</option>
-              <option>Shop/Retailer</option>
-              <option>Reseller</option>
-              <option>School</option>
-              <option>Office</option>
-              <option>Hotel</option>
-              <option>Restaurant</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="qf-product">Product</label>
-            <select id="qf-product" name="product" required>
-              <option value="">Select product</option>
-              <option>Mini Rolls</option>
-              <option>Jumbo Rolls</option>
-              <option>Kitchen Towels</option>
-              <option>Serviettes</option>
-              <option>Not sure yet</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="qf-quantity">Quantity</label>
-            <input type="text" id="qf-quantity" name="quantity" required placeholder="e.g. 20 rolls">
-          </div>
-          <div class="field">
-            <label for="qf-location">Delivery location</label>
-            <input type="text" id="qf-location" name="location" required autocomplete="address-level2">
-          </div>
-          <div class="field">
-            <label for="qf-inquiry-type">Inquiry type</label>
-            <select id="qf-inquiry-type" name="inquiryType" required>
-              <option value="">Select inquiry type</option>
-              <option>Household order</option>
-              <option>Bulk pricing</option>
-              <option>Institutional quote</option>
-              <option>Arranged delivery</option>
-              <option>General inquiry</option>
-            </select>
-          </div>
-          <div class="field field-full">
-            <label for="qf-message">Message</label>
-            <textarea id="qf-message" name="message" rows="4" placeholder="Any additional details we should know"></textarea>
-          </div>
+        <div class="inquiry-form-wrap">
+          <h3>Send an Inquiry</h3>
+          <form id="inquiry-form" novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="if-name">Name or business name</label>
+                <input type="text" id="if-name" name="name" required autocomplete="name">
+              </div>
+              <div class="field">
+                <label for="if-phone">Phone number</label>
+                <input type="tel" id="if-phone" name="phone" required autocomplete="tel">
+              </div>
+              <div class="field">
+                <label for="if-customer-type">Customer type</label>
+                <select id="if-customer-type" name="customerType" required>
+                  <option value="">Select customer type</option>
+                  <option>Household</option>
+                  <option>Shop/Retailer</option>
+                  <option>Reseller</option>
+                  <option>School</option>
+                  <option>Office</option>
+                  <option>Hotel</option>
+                  <option>Restaurant</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="if-product">Product or service needed</label>
+                <input type="text" id="if-product" name="product" required placeholder="e.g. Jumbo Rolls">
+              </div>
+              <div class="field">
+                <label for="if-quantity">Quantity</label>
+                <input type="text" id="if-quantity" name="quantity" required placeholder="e.g. 20 rolls">
+              </div>
+              <div class="field">
+                <label for="if-location">Delivery location</label>
+                <input type="text" id="if-location" name="location" required autocomplete="address-level2">
+              </div>
+              <div class="field field-full">
+                <label for="if-message">Message</label>
+                <textarea id="if-message" name="message" rows="3" placeholder="Any additional details we should know"></textarea>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-whatsapp" id="if-whatsapp-submit">Send via WhatsApp</button>
+              <button type="button" class="btn btn-outline-navy" id="if-email-submit">Send via Email Instead</button>
+            </div>
+            <p class="form-note" id="if-validation-msg" role="status" aria-live="polite"></p>
+          </form>
         </div>
-
-        <div class="form-actions">
-          <button type="submit" class="btn btn-whatsapp" id="qf-whatsapp-submit">Send via WhatsApp</button>
-          <button type="button" class="btn btn-outline-navy" id="qf-email-submit">Send via Email Instead</button>
-        </div>
-        <p class="form-note" id="qf-validation-msg" role="status" aria-live="polite"></p>
-      </form>
-    </div>
-  </section>
-
-  <!-- ============ CONTACT ============ -->
-  <section class="section section-tint" id="contact" aria-labelledby="contact-heading">
-    <div class="section-inner">
-      <h2 id="contact-heading">Contact Jansoo Afrik</h2>
-      <div class="contact-grid">
-        <div class="contact-item">
-          <h3>Phone &amp; WhatsApp</h3>
-          <a href="tel:+254753441871">0753 441 871</a>
-        </div>
-        <div class="contact-item">
-          <h3>Email</h3>
-          <a href="mailto:jansooafrik@gmail.com">jansooafrik@gmail.com</a>
-        </div>
-        <div class="contact-item">
-          <h3>Service Area</h3>
-          <p>Dagoretti, Nairobi. Kiambu, Kajiado and surrounding Nairobi metropolitan areas may be served &mdash; availability and delivery arrangements must be confirmed before ordering.</p>
-        </div>
-      </div>
-      <div class="contact-actions">
-        <a class="btn btn-whatsapp" id="wa-contact-btn" href="#" target="_blank" rel="noopener">Order on WhatsApp</a>
-        <a class="btn btn-outline-navy" href="#quote">Request a Quote</a>
-        <a class="btn btn-outline-navy" href="tel:+254753441871">Call Jansoo Afrik</a>
-        <a class="btn btn-outline-navy" id="email-contact-btn" href="mailto:jansooafrik@gmail.com">Send an Inquiry by Email</a>
       </div>
     </div>
   </section>
 
 </main>
 
-<!-- ============ FOOTER ============ -->
 <footer class="site-footer">
   <div class="footer-inner">
-    <div class="footer-col">
-      <p class="brand-name footer-brand">Jansoo Afrik</p>
-      <p>Nairobi-based distributor of sanitary paper and hygiene consumables serving households, shops, retailers, resellers, schools, offices, hotels and restaurants.</p>
-      <p>Serving Dagoretti, Nairobi. Kiambu, Kajiado and surrounding areas may be served &mdash; please confirm availability.</p>
-    </div>
-    <div class="footer-col">
-      <h3>Contact</h3>
-      <p><a href="tel:+254753441871">0753 441 871</a></p>
-      <p><a href="mailto:jansooafrik@gmail.com">jansooafrik@gmail.com</a></p>
-      <p>Dagoretti, Nairobi, Kenya</p>
-    </div>
-    <div class="footer-col">
-      <h3>Links</h3>
-      <ul class="footer-links">
-        <li><a href="#products">Products</a></li>
-        <li><a href="#households">For Households</a></li>
-        <li><a href="#bulk-pricing">Bulk Pricing</a></li>
-        <li><a href="#why-choose-us">Why Choose Us</a></li>
-        <li><a href="#community">Community</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h3>Order Now</h3>
+    <p class="footer-brand">Jansoo Afrik</p>
+    <p>Nairobi-based distributor of sanitary paper and hygiene consumables for households, shops, retailers, resellers, schools, offices, hotels and restaurants.</p>
+    <p>Dagoretti, Nairobi. Kiambu, Kajiado and surrounding areas may be served &mdash; availability and delivery timing must be confirmed.</p>
+    <p>0753 441 871 &middot; <a href="mailto:jansooafrik@gmail.com">jansooafrik@gmail.com</a></p>
+    <div class="footer-actions">
       <a class="btn btn-whatsapp btn-sm" id="wa-footer-btn" href="#" target="_blank" rel="noopener">WhatsApp</a>
       <a class="btn btn-outline-light btn-sm" href="tel:+254753441871">Call</a>
     </div>
+    <p class="footer-bottom">&copy; <span id="year"></span> Jansoo Afrik. All rights reserved.</p>
   </div>
-  <p class="footer-bottom">&copy; <span id="year"></span> Jansoo Afrik. All rights reserved.</p>
 </footer>
 
 <script>
 /* =========================================================
    Jansoo Afrik — Site Script
-   Vanilla JavaScript, no dependencies, no build step.
    ========================================================= */
-
-/* ---------------------------------------------------------
-   EDITABLE BUSINESS CONFIG
-   Update these values as the business details change.
-   --------------------------------------------------------- */
-const WHATSAPP_NUMBER = "254753441871"; // international format, no leading +
+const WHATSAPP_NUMBER = "254753441871";
 const CONTACT_EMAIL = "jansooafrik@gmail.com";
 
-/* Google Business Profile link — confirmed by the business owner for
-   reviews. Do not alter this URL. */
+/* Confirmed Google review link. Do not alter this URL. */
 const GOOGLE_REVIEWS_LINK = "https://share.google/9RMhAJ2K7Horli2F1";
-
-/* A second Google link was also supplied, but its intended purpose has
-   not been confirmed by the business owner, so it is NOT wired to any
-   button automatically. Keep it here, editable, until confirmed:
+/* A second Google link was supplied but its purpose is unconfirmed,
+   so it is not wired to any button:
    const GOOGLE_LINK_2 = "https://share.google/h2BJE0CmsIVS0JF6V"; */
 
-/* ---------------------------------------------------------
-   WhatsApp link helper
-   --------------------------------------------------------- */
 function waLink(message) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
-/* Message templates — edit the text below to change what is
-   pre-filled into WhatsApp for each type of inquiry. */
 const MESSAGES = {
   general:
     "Hello Jansoo Afrik. I have an inquiry. My name is ____. I would like information about ____. " +
@@ -889,34 +483,25 @@ const MESSAGES = {
     "My name is ____. I need ____ in the quantity of ____. My location is ____. " +
     "Please confirm availability and delivery arrangements.",
 
-  reseller:
+  bulk:
     "Hello Jansoo Afrik. I would like to request bulk pricing. Business name: ____. " +
     "Customer type: ____. Product: ____. Quantity: ____. Delivery location: ____. " +
     "Please confirm the price and availability.",
 
-  institution:
-    "Hello Jansoo Afrik. I would like to request an institutional quote. Institution/business name: ____. " +
-    "Customer type: ____. Products: ____. Quantities: ____. Delivery location: ____. " +
-    "Additional requirements: ____.",
+  quote:
+    "Hello Jansoo Afrik. I would like to request a quote. Institution/business name: ____. " +
+    "Customer type: ____. Product: ____. Quantity: ____. Delivery location: ____. " +
+    "Please confirm the price and availability.",
 
-  arrangedDelivery:
+  delivery:
     "Hello Jansoo Afrik. I would like help arranging delivery. My name is ____. My order is ____. " +
     "My location is ____. Please help me confirm rider availability, delivery cost and timing.",
 
-  productHousehold: (product) =>
-    `Hello Jansoo Afrik. I would like to order ${product} for my household. ` +
-    "My name is ____. Quantity needed: ____. My location is ____. " +
-    "Please confirm availability and delivery arrangements.",
-
-  productBulk: (product) =>
-    `Hello Jansoo Afrik. I would like to request bulk pricing for ${product}. ` +
-    "Business name: ____. Customer type: ____. Quantity: ____. Delivery location: ____. " +
-    "Please confirm the price and availability.",
+  product: (product) =>
+    `Hello Jansoo Afrik. I would like to inquire about ${product}. My name is ____. ` +
+    "Quantity needed: ____. My location is ____. Please confirm price and availability.",
 };
 
-/* ---------------------------------------------------------
-   Wire up static WhatsApp buttons
-   --------------------------------------------------------- */
 function setHref(id, href) {
   const el = document.getElementById(id);
   if (el) el.setAttribute("href", href);
@@ -924,45 +509,32 @@ function setHref(id, href) {
 
 setHref("wa-header-btn", waLink(MESSAGES.general));
 setHref("wa-hero-btn", waLink(MESSAGES.general));
-setHref("wa-household-path-btn", waLink(MESSAGES.household));
-setHref("wa-reseller-path-btn", waLink(MESSAGES.reseller));
-setHref("wa-institution-path-btn", waLink(MESSAGES.institution));
-setHref("wa-household-section-btn", waLink(MESSAGES.household));
-setHref("wa-bulk-section-btn", waLink(MESSAGES.reseller));
-setHref("wa-arrange-delivery-btn", waLink(MESSAGES.arrangedDelivery));
+setHref("wa-hero-bulk-btn", waLink(MESSAGES.bulk));
+setHref("wa-household-btn", waLink(MESSAGES.household));
+setHref("wa-bulk-btn", waLink(MESSAGES.bulk));
+setHref("wa-quote-btn", waLink(MESSAGES.quote));
+setHref("wa-delivery-btn", waLink(MESSAGES.delivery));
 setHref("wa-contact-btn", waLink(MESSAGES.general));
 setHref("wa-footer-btn", waLink(MESSAGES.general));
-
 setHref("google-rating-btn", GOOGLE_REVIEWS_LINK);
 setHref("google-reviews-btn", GOOGLE_REVIEWS_LINK);
 
-/* Product-specific inquiry buttons (household + bulk per product) */
 document.querySelectorAll("[data-wa-product]").forEach((link) => {
   const product = link.getAttribute("data-wa-product");
-  const type = link.getAttribute("data-wa-type");
-  const message =
-    type === "household"
-      ? MESSAGES.productHousehold(product)
-      : MESSAGES.productBulk(product);
-  link.setAttribute("href", waLink(message));
+  link.setAttribute("href", waLink(MESSAGES.product(product)));
   link.setAttribute("target", "_blank");
   link.setAttribute("rel", "noopener");
 });
 
-/* ---------------------------------------------------------
-   Mobile navigation
-   --------------------------------------------------------- */
+/* Mobile navigation */
 const hamburger = document.getElementById("hamburger");
 const mainNav = document.getElementById("main-nav");
-
 if (hamburger && mainNav) {
   hamburger.addEventListener("click", () => {
     const isOpen = mainNav.classList.toggle("open");
     hamburger.setAttribute("aria-expanded", String(isOpen));
     hamburger.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
   });
-
-  // Close menu when a nav link is chosen
   mainNav.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
       mainNav.classList.remove("open");
@@ -970,8 +542,6 @@ if (hamburger && mainNav) {
       hamburger.setAttribute("aria-label", "Open menu");
     });
   });
-
-  // Close menu on Escape, and return focus to the toggle button
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && mainNav.classList.contains("open")) {
       mainNav.classList.remove("open");
@@ -982,49 +552,35 @@ if (hamburger && mainNav) {
   });
 }
 
-/* ---------------------------------------------------------
-   Quote / inquiry form
-   No backend is available on GitHub Pages, so the form opens
-   WhatsApp with the details pre-filled, with a mailto fallback.
-   --------------------------------------------------------- */
-const quoteForm = document.getElementById("quote-form");
-const validationMsg = document.getElementById("qf-validation-msg");
+/* Inquiry form */
+const inquiryForm = document.getElementById("inquiry-form");
+const validationMsg = document.getElementById("if-validation-msg");
 
-function buildQuoteMessage() {
-  const data = new FormData(quoteForm);
+function buildInquiryMessage() {
+  const data = new FormData(inquiryForm);
   const name = (data.get("name") || "").toString().trim();
   const phone = (data.get("phone") || "").toString().trim();
   const customerType = (data.get("customerType") || "").toString().trim();
   const product = (data.get("product") || "").toString().trim();
   const quantity = (data.get("quantity") || "").toString().trim();
   const location = (data.get("location") || "").toString().trim();
-  const inquiryType = (data.get("inquiryType") || "").toString().trim();
   const message = (data.get("message") || "").toString().trim();
 
   return (
-    "Hello Jansoo Afrik. I would like to request a quote.\n" +
+    "Hello Jansoo Afrik. I would like to send an inquiry.\n" +
     `Name/Business: ${name}\n` +
     `Phone: ${phone}\n` +
     `Customer type: ${customerType}\n` +
-    `Product: ${product}\n` +
+    `Product/service needed: ${product}\n` +
     `Quantity: ${quantity}\n` +
     `Delivery location: ${location}\n` +
-    `Inquiry type: ${inquiryType}\n` +
     (message ? `Additional details: ${message}\n` : "") +
     "Please confirm the price and availability."
   );
 }
 
 function requiredFieldIds() {
-  return [
-    "qf-name",
-    "qf-phone",
-    "qf-customer-type",
-    "qf-product",
-    "qf-quantity",
-    "qf-location",
-    "qf-inquiry-type",
-  ];
+  return ["if-name", "if-phone", "if-customer-type", "if-product", "if-quantity", "if-location"];
 }
 
 function formIsValid() {
@@ -1036,40 +592,34 @@ function formIsValid() {
   return valid;
 }
 
-if (quoteForm) {
-  quoteForm.addEventListener("submit", (e) => {
+if (inquiryForm) {
+  inquiryForm.addEventListener("submit", (e) => {
     e.preventDefault();
     if (!formIsValid()) {
       validationMsg.textContent = "Please fill in all required fields before sending.";
       return;
     }
-    const msg = buildQuoteMessage();
-    window.open(waLink(msg), "_blank", "noopener");
+    window.open(waLink(buildInquiryMessage()), "_blank", "noopener");
     validationMsg.textContent = "Your details were sent to WhatsApp — please tap send in the WhatsApp window to complete your inquiry.";
   });
 
-  const emailBtn = document.getElementById("qf-email-submit");
+  const emailBtn = document.getElementById("if-email-submit");
   if (emailBtn) {
     emailBtn.addEventListener("click", () => {
       if (!formIsValid()) {
         validationMsg.textContent = "Please fill in all required fields before sending.";
         return;
       }
-      const msg = buildQuoteMessage();
-      const subject = encodeURIComponent("Quote Request — Jansoo Afrik");
-      const body = encodeURIComponent(msg);
+      const subject = encodeURIComponent("Inquiry — Jansoo Afrik");
+      const body = encodeURIComponent(buildInquiryMessage());
       window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
       validationMsg.textContent = "Your email app should now open with your details filled in — please review and send.";
     });
   }
 }
 
-/* ---------------------------------------------------------
-   Footer year
-   --------------------------------------------------------- */
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
-
 </script>
 </body>
 </html>
