@@ -18,11 +18,14 @@ body{margin:0;font:17px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-seri
 .wrap{max-width:960px;margin:0 auto;padding:0 20px}
 a{color:var(--green)}
 a:focus-visible,.btn:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
-header{padding:36px 0 40px}
+header{padding:36px 0 28px}
 .brand{margin:0 0 20px;font-weight:800;font-size:18px;color:var(--green)}
 .bar{width:48px;height:4px;background:var(--gold);margin:0 0 16px}
 h1{margin:0;font-size:clamp(28px,7vw,46px);line-height:1.1;font-weight:800;text-transform:uppercase;color:var(--green)}
-.sub{margin:14px 0 24px;font-size:clamp(16px,3.6vw,20px);max-width:34em;color:var(--muted)}
+.sub{margin:14px 0 22px;font-size:clamp(16px,3.6vw,20px);max-width:34em;color:var(--muted)}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px 20px}
+.jumps{display:flex;flex-wrap:wrap;gap:6px 18px;list-style:none;margin:0;padding:0;font-size:15px;font-weight:600}
+.jumps a{text-decoration:none;border-bottom:1px solid var(--line)}
 section{padding:36px 0}
 h2{margin:0 0 18px;font-size:24px;line-height:1.2;color:var(--green)}
 .btn{display:inline-block;background:var(--green);color:#fff;text-decoration:none;font-weight:700;padding:12px 20px;border-radius:6px;text-align:center;border:2px solid var(--green)}
@@ -51,6 +54,7 @@ blockquote{margin:0 0 22px;padding:0 0 0 16px;border-left:4px solid var(--gold);
 blockquote p{margin:0 0 6px}
 cite{font-style:normal;font-size:15px;color:var(--muted)}
 footer{border-top:1px solid var(--line);padding:22px 0;font-size:14px;color:var(--muted)}
+footer a{color:var(--muted);text-decoration:underline}
 @media(min-width:600px){.grid{grid-template-columns:1fr 1fr}}
 @media(min-width:900px){.grid.four{grid-template-columns:repeat(4,1fr)}.grid.three{grid-template-columns:repeat(3,1fr)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -64,7 +68,14 @@ footer{border-top:1px solid var(--line);padding:22px 0;font-size:14px;color:var(
     <div class="bar"></div>
     <h1>Your toilet tissue &amp; hygiene consumables partner</h1>
     <p class="sub">Supplying homes, shops and institutions across Dagoretti and Nairobi</p>
-    <a class="btn" href="https://wa.me/254753441871?text=Hello%20Jansoo%20Afrik%2C%20I%27d%20like%20to%20place%20an%20order." rel="noopener">Order on WhatsApp</a>
+    <div class="hero-actions">
+      <a class="btn" href="https://wa.me/254753441871?text=Hello%20Jansoo%20Afrik%2C%20I%27d%20like%20to%20place%20an%20order." rel="noopener">Order on WhatsApp</a>
+      <ul class="jumps">
+        <li><a href="#households">Households</a></li>
+        <li><a href="#resellers">Resellers</a></li>
+        <li><a href="#institutions">Institutions</a></li>
+      </ul>
+    </div>
   </div>
 </header>
 
@@ -75,7 +86,7 @@ footer{border-top:1px solid var(--line);padding:22px 0;font-size:14px;color:var(
     <div class="grid four">
       <article class="card">
         <h3>Mini Tissue</h3>
-        <p>Compact toilet tissue for school-going children, smaller budgets, shops and retailers.</p>
+        <p>Compact toilet tissue for everyday use, smaller budgets, shops and retailers.</p>
         <div class="price"><small>FROM</small>KSh 660</div>
         <p class="meta">for 30 pieces (≈ KSh 22 each). Bulk MOQ 30.</p>
         <a class="btn" href="https://wa.me/254753441871?text=Hello%20Jansoo%20Afrik%2C%20I%27d%20like%20to%20order%20Mini%20Tissue." rel="noopener">Order on WhatsApp</a>
@@ -102,7 +113,7 @@ footer{border-top:1px solid var(--line);padding:22px 0;font-size:14px;color:var(
         <a class="btn" href="https://wa.me/254753441871?text=Hello%20Jansoo%20Afrik%2C%20I%27d%20like%20to%20order%20Serviettes." rel="noopener">Order on WhatsApp</a>
       </article>
     </div>
-    <p class="note">Prices shown are starting bulk rates for the stated quantities. They exclude delivery and may vary. Households can order the quantity they need; the MOQ applies to reseller and institutional bulk pricing.</p>
+    <p class="note">Prices shown are starting bulk rates for the stated quantities. They exclude delivery and may vary. Households can order any quantity; the MOQ applies to reseller and institutional bulk pricing.</p>
   </div>
 </section>
 
@@ -110,20 +121,20 @@ footer{border-top:1px solid var(--line);padding:22px 0;font-size:14px;color:var(
   <div class="wrap">
     <h2>Who we serve</h2>
     <div class="grid three">
-      <div class="seg">
+      <div class="seg" id="households">
         <h3>Households</h3>
         <p class="q">How much do I need, and how soon?</p>
-        <p>Order the quantity that suits your home. Jumbo Tissue is for stocking up so you don't think about tissue for a while; Mini Tissue suits school-going children and smaller budgets. There is no minimum. Message us for pricing and delivery.</p>
+        <p>Order any quantity, no minimum. Jumbo Tissue is for stocking up; Mini Tissue suits everyday use and tighter budgets. Message us for pricing and delivery.</p>
       </div>
-      <div class="seg">
+      <div class="seg" id="resellers">
         <h3>Resellers &amp; Shops</h3>
         <p class="q">What quantity can I start with?</p>
         <p>Bulk pricing applies at the MOQ. New and growing resellers can start with flexible quantities, and we help with margins and stock planning.</p>
       </div>
-      <div class="seg">
+      <div class="seg" id="institutions">
         <h3>Institutions</h3>
         <p class="q">Schools, offices, hotels and restaurants</p>
-        <p>We quote based on product, quantity and location.</p>
+        <p>Regular supply of tissue, kitchen towels and serviettes, quoted on product, quantity and location.</p>
         <a class="btn alt" href="https://wa.me/254753441871?text=Hello%20Jansoo%20Afrik%2C%20I%27d%20like%20a%20quote.%0AProduct%3A%20%0AQuantity%3A%20%0ALocation%3A%20" rel="noopener">Request a quote</a>
       </div>
     </div>
@@ -134,10 +145,10 @@ footer{border-top:1px solid var(--line);padding:22px 0;font-size:14px;color:var(
   <div class="wrap">
     <h2>Why buyers choose us</h2>
     <ul class="facts">
-      <li><strong>Small starting quantities</strong>Start from 30 pieces of Mini Tissue or 6 packs of Serviettes.</li>
+      <li><strong>Flexible orders</strong>Homes order any quantity; new resellers can start small.</li>
       <li><strong>Wholesale pricing</strong>Bulk rates at quantities set for resale.</li>
-      <li><strong>Local delivery</strong>We arrange delivery across Dagoretti and Nairobi.</li>
-      <li><strong>Four product lines</strong>Mini and jumbo tissue, kitchen towels and serviettes.</li>
+      <li><strong>Delivery arranged for you</strong>Across Dagoretti and Nairobi.</li>
+      <li><strong>M-Pesa accepted</strong>Bank transfer and cheque also accepted.</li>
     </ul>
   </div>
 </section>
@@ -150,8 +161,9 @@ footer{border-top:1px solid var(--line);padding:22px 0;font-size:14px;color:var(
       <a href="tel:+254753441871">Call 0753 441 871</a>
       <a href="mailto:jansooafrik@gmail.com">jansooafrik@gmail.com</a>
     </p>
-    <p><strong>Delivery.</strong> We arrange delivery for you and help negotiate an affordable rider fee. You pay only the delivery cost. In Dagoretti, order by 3:30 p.m. for delivery between 10:00 a.m. and 4:30 p.m. Other Nairobi areas are confirmed when you enquire. Ordering in larger quantities? You are welcome to send your own rider or driver.</p>
-    <p><strong>Payment.</strong> We accept M-Pesa, bank transfer and cheque deposits (within 72 hours of the date written on the cheque). Payment details are shared on WhatsApp.</p>
+    <p><strong>Delivery.</strong> Dagoretti delivery runs Tuesday to Saturday. Order between 9:00 a.m. and 3:30 p.m. for delivery the same day, between 10:00 a.m. and 4:30 p.m.; later orders go out the next working day. Outside these days, please collect or send your own rider. Other Nairobi areas are confirmed when you enquire.</p>
+    <p><strong>Payment.</strong> We accept M-Pesa, bank transfer and cheque. Payment details are shared on WhatsApp. Institution payment terms are agreed on WhatsApp.</p>
+    <p><strong>Hours.</strong> Tuesday to Friday, 9:00 a.m. to 4:30 p.m. Saturday, 7:00 a.m. to 12:30 p.m. Closed Sunday and Monday.</p>
   </div>
 </section>
 
@@ -172,7 +184,7 @@ footer{border-top:1px solid var(--line);padding:22px 0;font-size:14px;color:var(
 </main>
 
 <footer>
-  <div class="wrap">© Jansoo Afrik · Old York Road, Mutuini, Dagoretti South, Nairobi</div>
+  <div class="wrap">© Jansoo Afrik · <a href="https://share.google/9RMhAJ2K7Horli2F1" rel="noopener">Old York Road, Mutuini, Dagoretti South, Nairobi</a></div>
 </footer>
 
 </body>
