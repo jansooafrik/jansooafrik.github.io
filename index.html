@@ -58,11 +58,33 @@ footer a{color:var(--muted);text-decoration:underline}
 @media(min-width:600px){.grid{grid-template-columns:1fr 1fr}}
 @media(min-width:900px){.grid.four{grid-template-columns:repeat(4,1fr)}.grid.three{grid-template-columns:repeat(3,1fr)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.stickynav{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line)}
+.stickynav .wrap{display:flex;gap:18px;overflow-x:auto;padding-top:10px;padding-bottom:10px;-webkit-overflow-scrolling:touch}
+.stickynav a{white-space:nowrap;font-size:14px;font-weight:700;text-decoration:none;color:var(--green)}
+.stickynav a:hover{color:var(--brown)}
+.tear{border:none;height:14px;margin:0;background:
+  radial-gradient(circle at 6px 7px, transparent 5px, var(--tint) 5px) repeat-x;
+  background-size:16px 14px;background-color:#fff}
+.tear.on-tint{background:
+  radial-gradient(circle at 6px 7px, transparent 5px, #fff 5px) repeat-x;
+  background-size:16px 14px;background-color:var(--tint)}
 </style>
 </head>
 <body>
 
-<header>
+<nav class="stickynav" aria-label="Section links">
+  <div class="wrap">
+    <a href="#top">Home</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+    <a href="#hours">Hours</a>
+    <a href="#payments">Payments</a>
+    <a href="#reviews">Reviews</a>
+  </div>
+</nav>
+
+<header id="top">
   <div class="wrap">
     <p class="brand">Jansoo Afrik</p>
     <div class="bar"></div>
@@ -80,6 +102,7 @@ footer a{color:var(--muted);text-decoration:underline}
 </header>
 
 <main>
+<hr class="tear">
 <section id="products" class="tint">
   <div class="wrap">
     <h2>Products</h2>
@@ -117,6 +140,7 @@ footer a{color:var(--muted);text-decoration:underline}
   </div>
 </section>
 
+<hr class="tear on-tint">
 <section id="serve">
   <div class="wrap">
     <h2>Who we serve</h2>
@@ -141,6 +165,7 @@ footer a{color:var(--muted);text-decoration:underline}
   </div>
 </section>
 
+<hr class="tear">
 <section id="why" class="tint">
   <div class="wrap">
     <h2>Why buyers choose us</h2>
@@ -153,6 +178,7 @@ footer a{color:var(--muted);text-decoration:underline}
   </div>
 </section>
 
+<hr class="tear on-tint">
 <section class="contact" id="contact">
   <div class="wrap">
     <h2>Contact</h2>
@@ -161,12 +187,27 @@ footer a{color:var(--muted);text-decoration:underline}
       <a href="tel:+254753441871">Call 0753 441 871</a>
       <a href="mailto:jansooafrik@gmail.com">jansooafrik@gmail.com</a>
     </p>
-    <p><strong>Delivery.</strong> Dagoretti delivery runs Tuesday to Saturday. Order between 9:00 a.m. and 3:30 p.m. for delivery the same day, between 10:00 a.m. and 4:30 p.m.; later orders go out the next working day. Outside these days, please collect or send your own rider. Other Nairobi areas are confirmed when you enquire.</p>
-    <p><strong>Payment.</strong> We accept M-Pesa, bank transfer and cheque. Payment details are shared on WhatsApp. Institution payment terms are agreed on WhatsApp.</p>
-    <p><strong>Hours.</strong> Tuesday to Friday, 9:00 a.m. to 4:30 p.m. Saturday, 7:00 a.m. to 12:30 p.m. Closed Sunday and Monday.</p>
+    <p>Dagoretti delivery runs Tuesday to Saturday. Order between 9:00 a.m. and 3:30 p.m. for delivery the same day, between 10:00 a.m. and 4:30 p.m.; later orders go out the next working day. Outside these days, please collect or send your own rider. Other Nairobi areas are confirmed when you enquire.</p>
   </div>
 </section>
 
+<hr class="tear">
+<section id="hours" class="tint">
+  <div class="wrap">
+    <h2>Hours</h2>
+    <p>Tuesday to Friday, 9:00 a.m. to 4:30 p.m.<br>Saturday, 7:00 a.m. to 12:30 p.m.<br>Closed Sunday and Monday.</p>
+  </div>
+</section>
+
+<hr class="tear on-tint">
+<section id="payments">
+  <div class="wrap">
+    <h2>Payments</h2>
+    <p>We accept M-Pesa, bank transfer and cheque. Payment details are shared on WhatsApp. Institution payment terms are agreed on WhatsApp.</p>
+  </div>
+</section>
+
+<hr class="tear">
 <section id="reviews" class="tint">
   <div class="wrap">
     <h2>Customer reviews</h2>
