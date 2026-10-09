@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -11,221 +11,227 @@
 <meta property="og:locale" content="en_KE">
 <meta name="theme-color" content="#1b4332">
 <style>
-:root{--ink:#1c2420;--muted:#5d6560;--green:#1b4332;--gold:#c7891e;--brown:#7a4a23;--line:#e3e3de;--tint:#f5f5f2}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font:17px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:#fff}
-.wrap{max-width:960px;margin:0 auto;padding:0 20px}
-a{color:var(--green)}
-a:focus-visible,.btn:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
-header{padding:36px 0 28px}
-.brand{margin:0 0 20px;font-weight:800;font-size:18px;color:var(--green)}
-.bar{width:48px;height:4px;background:var(--gold);margin:0 0 16px}
-h1{margin:0;font-size:clamp(28px,7vw,46px);line-height:1.1;font-weight:800;text-transform:uppercase;color:var(--green)}
-.sub{margin:14px 0 22px;font-size:clamp(16px,3.6vw,20px);max-width:34em;color:var(--muted)}
-.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px 20px}
-.jumps{display:flex;flex-wrap:wrap;gap:6px 18px;list-style:none;margin:0;padding:0;font-size:15px;font-weight:600}
-.jumps a{text-decoration:none;border-bottom:1px solid var(--line)}
-section{padding:36px 0}
-h2{margin:0 0 18px;font-size:24px;line-height:1.2;color:var(--green)}
-.btn{display:inline-block;background:var(--green);color:#fff;text-decoration:none;font-weight:700;padding:12px 20px;border-radius:6px;text-align:center;border:2px solid var(--green)}
-.btn:hover{background:var(--brown);border-color:var(--brown)}
-.btn.alt{background:#fff;color:var(--green)}
-.btn.alt:hover{background:var(--green);color:#fff;border-color:var(--green)}
-.grid{display:grid;gap:16px;grid-template-columns:1fr}
-.card{border:1px solid var(--line);border-radius:8px;padding:20px;display:flex;flex-direction:column;background:#fff}
-.card h3{margin:0 0 6px;font-size:20px}
-.card p{margin:0 0 14px;color:var(--muted)}
-.price{margin:auto 0 2px;font-size:24px;font-weight:800;color:var(--green)}
-.price small{font-size:13px;font-weight:700;letter-spacing:.04em;margin-right:4px}
-.card .meta{font-size:14px;margin:0 0 16px}
-.note{margin:18px 0 0;font-size:15px;color:var(--muted);max-width:46em}
-.tint{background:var(--tint)}
-.seg h3{margin:0;font-size:19px}
-.seg .q{margin:2px 0 6px;color:var(--muted);font-size:15px}
-.seg p{margin:0 0 12px;max-width:44em}
-.facts{margin:0;padding:0;list-style:none}
-.facts li{margin:0 0 14px}
-.facts strong{display:block}
-.contact .links{font-size:19px;margin:0 0 18px}
-.contact .links a{font-weight:700;margin-right:16px;white-space:nowrap}
-.contact p{margin:0 0 12px;max-width:44em}
-blockquote{margin:0 0 22px;padding:0 0 0 16px;border-left:4px solid var(--gold);max-width:44em}
-blockquote p{margin:0 0 6px}
-cite{font-style:normal;font-size:15px;color:var(--muted)}
-footer{border-top:1px solid var(--line);padding:22px 0;font-size:14px;color:var(--muted)}
-footer a{color:var(--muted);text-decoration:underline}
-@media(min-width:600px){.grid{grid-template-columns:1fr 1fr}}
-@media(min-width:900px){.grid.four{grid-template-columns:repeat(4,1fr)}.grid.three{grid-template-columns:repeat(3,1fr)}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+:root{
+  --ink:#1B4332;
+  --gold:#C7891E;
+  --brown:#7A4A23;
+  --cream:#F7F5F0;
+  --white:#FFFFFF;
+  --text:#2A2A28;
+  --line:#E4E0D8;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55}
+a{color:var(--gold)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+h1,h2,h3{color:var(--ink);line-height:1.25;margin:0 0 12px}
+h2{font-size:22px;margin-top:0}
+h3{font-size:17px}
+p{margin:0 0 14px;max-width:62ch}
+section{padding:40px 0}
+section + section{border-top:1px solid var(--line)}
 
-.stickynav{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line)}
-.stickynav .wrap{display:flex;gap:18px;overflow-x:auto;padding-top:10px;padding-bottom:10px;-webkit-overflow-scrolling:touch}
-.stickynav a{white-space:nowrap;font-size:14px;font-weight:700;text-decoration:none;color:var(--green)}
-.stickynav a:hover{color:var(--brown)}
-.tear{border:none;height:14px;margin:0;background:
-  radial-gradient(circle at 6px 7px, transparent 5px, var(--tint) 5px) repeat-x;
-  background-size:16px 14px;background-color:#fff}
-.tear.on-tint{background:
-  radial-gradient(circle at 6px 7px, transparent 5px, #fff 5px) repeat-x;
-  background-size:16px 14px;background-color:var(--tint)}
+header.top{position:sticky;top:0;background:var(--white);border-bottom:1px solid var(--line);z-index:10}
+nav.main{display:flex;gap:18px;overflow-x:auto;padding:14px 20px;max-width:720px;margin:0 auto}
+nav.main a{color:var(--ink);text-decoration:none;font-size:14px;font-weight:600;white-space:nowrap}
+nav.main a:hover{color:var(--gold)}
+
+.hero{padding:48px 0 36px}
+.hero .eyebrow{color:var(--brown);font-weight:600;font-size:14px;margin-bottom:6px}
+.hero h1{font-size:28px;max-width:16ch}
+.hero p.lede{font-size:16px;max-width:42ch}
+.btn{display:inline-block;background:var(--ink);color:var(--white);text-decoration:none;font-weight:600;padding:12px 20px;border-radius:6px;font-size:15px}
+.btn:hover{background:#143a29}
+.hero .segments{list-style:none;padding:0;margin:20px 0 0;display:flex;gap:16px;flex-wrap:wrap}
+.hero .segments a{font-size:14px;font-weight:600;text-decoration:underline}
+
+.product-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:20px}
+@media(min-width:560px){.product-grid{grid-template-columns:1fr 1fr}}
+.product{background:var(--white);border:1px solid var(--line);border-radius:8px;padding:20px}
+.product h3{margin-bottom:6px}
+.product .price{color:var(--ink);font-weight:700;font-size:17px;margin:10px 0 2px}
+.product .price span{color:var(--brown);font-weight:600;font-size:12px;letter-spacing:.03em;margin-right:4px}
+.product .unit{color:var(--brown);font-size:13px;margin-bottom:14px}
+.product .btn{padding:9px 16px;font-size:14px}
+.note{font-size:13px;color:var(--brown);margin-top:18px;max-width:62ch}
+
+.segment{margin-bottom:28px}
+.segment:last-child{margin-bottom:0}
+.segment h3{margin-bottom:2px}
+.segment .q{color:var(--brown);font-weight:600;font-size:14px;margin-bottom:8px}
+
+.reasons{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:18px}
+.reasons strong{color:var(--ink);display:block;margin-bottom:3px}
+
+.contact-block p{margin-bottom:10px}
+.contact-links a{font-weight:600;margin-right:4px}
+
+blockquote{margin:0 0 22px;padding:0 0 0 16px;border-left:3px solid var(--gold)}
+blockquote p{font-size:15px;margin-bottom:6px}
+.stars{color:var(--gold);font-size:14px}
+.cite{font-size:13px;color:var(--brown)}
+
+footer{padding:32px 0;text-align:center}
+.foot-icons{display:flex;justify-content:center;gap:18px;margin-bottom:10px}
+.foot-icons a{color:var(--ink);display:inline-flex}
+.foot-icons svg{width:22px;height:22px}
+footer .foot-products{font-size:13px;color:var(--brown);margin:0}
 </style>
 </head>
 <body>
 
-<nav class="stickynav" aria-label="Section links">
-  <div class="wrap">
+<header class="top">
+  <nav class="main">
     <a href="#top">Home</a>
     <a href="#products">Products</a>
     <a href="#contact">Contact</a>
-    <a href="#hours">Hours</a>
-    <a href="#payments">Payments</a>
     <a href="#reviews">Reviews</a>
-  </div>
-</nav>
-
-<header id="top">
-  <div class="wrap">
-    <p class="brand">Jansoo Afrik</p>
-    <div class="bar"></div>
-    <h1>Your toilet tissue &amp; hygiene consumables partner</h1>
-    <p class="sub">Supplying homes, shops and institutions across Dagoretti and Nairobi</p>
-    <div class="hero-actions">
-      <a class="btn" href="https://wa.me/254753441871?text=Hello%20Jansoo%20Afrik%2C%20I%27d%20like%20to%20place%20an%20order." rel="noopener">Order on WhatsApp</a>
-      <ul class="jumps">
-        <li><a href="#households">Households</a></li>
-        <li><a href="#resellers">Resellers</a></li>
-        <li><a href="#institutions">Institutions</a></li>
-      </ul>
-    </div>
-  </div>
+  </nav>
 </header>
 
-<main>
-<hr class="tear">
-<section id="products" class="tint">
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="eyebrow">Jansoo Afrik</div>
+    <h1>Your toilet tissue &amp; hygiene consumables partner</h1>
+    <p class="lede">Supplying homes, shops and institutions across Dagoretti and Nairobi</p>
+    <a class="btn" href="https://wa.me/254753441871?text=Hello%20Jansoo%20Afrik%2C%20I%27d%20like%20to%20place%20an%20order.">Order on WhatsApp</a>
+    <ul class="segments">
+      <li><a href="#households">Households</a></li>
+      <li><a href="#resellers">Resellers</a></li>
+      <li><a href="#institutions">Institutions</a></li>
+    </ul>
+  </div>
+</section>
+
+<section id="products">
   <div class="wrap">
     <h2>Products</h2>
-    <div class="grid four">
-      <article class="card">
+    <div class="product-grid">
+
+      <div class="product">
         <h3>Mini Tissue</h3>
         <p>Compact toilet tissue for everyday use, smaller budgets, shops and retailers.</p>
-        <div class="price"><small>FROM</small>KSh 660</div>
-        <p class="meta">for 30 pieces (≈ KSh 22 each). Bulk MOQ 30.</p>
-        <a class="btn" href="https://wa.me/254753441871?text=Hello%20Jansoo%20Afrik%2C%20I%27d%20like%20to%20order%20Mini%20Tissue." rel="noopener">Order on WhatsApp</a>
-      </article>
-      <article class="card">
+        <div class="price"><span>FROM</span>KSh 660</div>
+        <div class="unit">for 30 pieces (&asymp; KSh 22 each). Bulk MOQ 30.</div>
+        <a class="btn" href="https://wa.me/254753441871?text=Hello%20Jansoo%20Afrik%2C%20I%27d%20like%20to%20order%20Mini%20Tissue.">Order on WhatsApp</a>
+      </div>
+
+      <div class="product">
         <h3>Jumbo Tissue</h3>
         <p>Stock up and forget about tissue for a while. Also for offices, hotels, restaurants and institutions.</p>
-        <div class="price"><small>FROM</small>KSh 1,080</div>
-        <p class="meta">for 12 pieces (≈ KSh 90 each). Bulk MOQ 12.</p>
-        <a class="btn" href="https://wa.me/254753441871?text=Hello%20Jansoo%20Afrik%2C%20I%27d%20like%20to%20order%20Jumbo%20Tissue." rel="noopener">Order on WhatsApp</a>
-      </article>
-      <article class="card">
+        <div class="price"><span>FROM</span>KSh 1,080</div>
+        <div class="unit">for 12 pieces (&asymp; KSh 90 each). Bulk MOQ 12.</div>
+        <a class="btn" href="https://wa.me/254753441871?text=Hello%20Jansoo%20Afrik%2C%20I%27d%20like%20to%20order%20Jumbo%20Tissue.">Order on WhatsApp</a>
+      </div>
+
+      <div class="product">
         <h3>Kitchen Towels</h3>
         <p>Absorbent kitchen paper for homes, kitchens and food service.</p>
-        <div class="price"><small>FROM</small>KSh 850</div>
-        <p class="meta">for 10 rolls (≈ KSh 85 each). Bulk MOQ 10.</p>
-        <a class="btn" href="https://wa.me/254753441871?text=Hello%20Jansoo%20Afrik%2C%20I%27d%20like%20to%20order%20Kitchen%20Towels." rel="noopener">Order on WhatsApp</a>
-      </article>
-      <article class="card">
+        <div class="price"><span>FROM</span>KSh 850</div>
+        <div class="unit">for 10 rolls (&asymp; KSh 85 each). Bulk MOQ 10.</div>
+        <a class="btn" href="https://wa.me/254753441871?text=Hello%20Jansoo%20Afrik%2C%20I%27d%20like%20to%20order%20Kitchen%20Towels.">Order on WhatsApp</a>
+      </div>
+
+      <div class="product">
         <h3>Serviettes</h3>
         <p>Paper napkins for homes, restaurants and caterers.</p>
-        <div class="price"><small>FROM</small>KSh 540</div>
-        <p class="meta">for 6 packs (≈ KSh 90 each). Bulk MOQ 6.</p>
-        <a class="btn" href="https://wa.me/254753441871?text=Hello%20Jansoo%20Afrik%2C%20I%27d%20like%20to%20order%20Serviettes." rel="noopener">Order on WhatsApp</a>
-      </article>
+        <div class="price"><span>FROM</span>KSh 540</div>
+        <div class="unit">for 6 packs (&asymp; KSh 90 each). Bulk MOQ 6.</div>
+        <a class="btn" href="https://wa.me/254753441871?text=Hello%20Jansoo%20Afrik%2C%20I%27d%20like%20to%20order%20Serviettes.">Order on WhatsApp</a>
+      </div>
+
     </div>
     <p class="note">Prices shown are starting bulk rates for the stated quantities. They exclude delivery and may vary. Households can order any quantity; the MOQ applies to reseller and institutional bulk pricing.</p>
   </div>
 </section>
 
-<hr class="tear on-tint">
-<section id="serve">
+<section id="who-we-serve">
   <div class="wrap">
     <h2>Who we serve</h2>
-    <div class="grid three">
-      <div class="seg" id="households">
-        <h3>Households</h3>
-        <p class="q">How much do I need, and how soon?</p>
-        <p>Order any quantity, no minimum. Jumbo Tissue is for stocking up; Mini Tissue suits everyday use and tighter budgets. Message us for pricing and delivery.</p>
-      </div>
-      <div class="seg" id="resellers">
-        <h3>Resellers &amp; Shops</h3>
-        <p class="q">What quantity can I start with?</p>
-        <p>Bulk pricing applies at the MOQ. New and growing resellers can start with flexible quantities, and we help with margins and stock planning.</p>
-      </div>
-      <div class="seg" id="institutions">
-        <h3>Institutions</h3>
-        <p class="q">Schools, offices, hotels and restaurants</p>
-        <p>Regular supply of tissue, kitchen towels and serviettes, quoted on product, quantity and location.</p>
-        <a class="btn alt" href="https://wa.me/254753441871?text=Hello%20Jansoo%20Afrik%2C%20I%27d%20like%20a%20quote.%0AProduct%3A%20%0AQuantity%3A%20%0ALocation%3A%20" rel="noopener">Request a quote</a>
-      </div>
+
+    <div class="segment" id="households">
+      <h3>Households</h3>
+      <div class="q">How much do I need, and how soon?</div>
+      <p>Order any quantity, no minimum. Jumbo Tissue is for stocking up; Mini Tissue suits everyday use and tighter budgets. Message us for pricing and delivery.</p>
+    </div>
+
+    <div class="segment" id="resellers">
+      <h3>Resellers &amp; Shops</h3>
+      <div class="q">What quantity can I start with?</div>
+      <p>Bulk pricing applies at the MOQ. New and growing resellers can start with flexible quantities, and we help with margins and stock planning.</p>
+    </div>
+
+    <div class="segment" id="institutions">
+      <h3>Institutions</h3>
+      <div class="q">Schools, offices, hotels and restaurants</div>
+      <p>Regular supply of tissue, kitchen towels and serviettes, quoted on product, quantity and location.</p>
+      <a class="btn" href="https://wa.me/254753441871?text=Hello%20Jansoo%20Afrik%2C%20I%27d%20like%20a%20quote.%0AProduct%3A%20%0AQuantity%3A%20%0ALocation%3A%20">Request a quote</a>
     </div>
   </div>
 </section>
 
-<hr class="tear">
-<section id="why" class="tint">
+<section id="why-us">
   <div class="wrap">
     <h2>Why buyers choose us</h2>
-    <ul class="facts">
+    <ul class="reasons">
       <li><strong>Flexible orders</strong>Homes order any quantity; new resellers can start small.</li>
       <li><strong>Wholesale pricing</strong>Bulk rates at quantities set for resale.</li>
-      <li><strong>Delivery arranged for you</strong>Across Dagoretti and Nairobi.</li>
-      <li><strong>M-Pesa accepted</strong>Bank transfer and cheque also accepted.</li>
+      <li><strong>Delivery arranged for you</strong>Dagoretti core zones; other Nairobi areas confirmed on request.</li>
     </ul>
   </div>
 </section>
 
-<hr class="tear on-tint">
-<section class="contact" id="contact">
-  <div class="wrap">
+<section id="contact">
+  <div class="wrap contact-block">
     <h2>Contact</h2>
-    <p class="links">
-      <a href="https://wa.me/254753441871?text=Hello%20Jansoo%20Afrik%2C%20I%27d%20like%20to%20place%20an%20order." rel="noopener">WhatsApp 0753 441 871</a>
-      <a href="tel:+254753441871">Call 0753 441 871</a>
+    <p class="contact-links">
+      <a href="https://wa.me/254753441871?text=Hello%20Jansoo%20Afrik%2C%20I%27d%20like%20to%20place%20an%20order.">WhatsApp 0753 441 871</a> &middot;
+      <a href="tel:+254753441871">Call 0753 441 871</a> &middot;
       <a href="mailto:jansooafrik@gmail.com">jansooafrik@gmail.com</a>
     </p>
-    <p>Dagoretti delivery runs Tuesday to Saturday. Order between 9:00 a.m. and 3:30 p.m. for delivery the same day, between 10:00 a.m. and 4:30 p.m.; later orders go out the next working day. Outside these days, please collect or send your own rider. Other Nairobi areas are confirmed when you enquire.</p>
+    <p>Old York Road, Mutuini, Dagoretti South, Nairobi</p>
+    <p>Tuesday to Friday, 9:00 a.m. to 4:30 p.m. Saturday, 7:00 a.m. to 12:30 p.m. Closed Sunday and Monday.</p>
+    <p>Dagoretti delivery runs Tuesday to Saturday. Order between 9:00 a.m. and 3:30 p.m. for same-day delivery; later orders go out the next working day. Other Nairobi areas confirmed when you enquire.</p>
+    <p>Flexible payment methods.</p>
   </div>
 </section>
 
-<hr class="tear">
-<section id="hours" class="tint">
-  <div class="wrap">
-    <h2>Hours</h2>
-    <p>Tuesday to Friday, 9:00 a.m. to 4:30 p.m.<br>Saturday, 7:00 a.m. to 12:30 p.m.<br>Closed Sunday and Monday.</p>
-  </div>
-</section>
-
-<hr class="tear on-tint">
-<section id="payments">
-  <div class="wrap">
-    <h2>Payments</h2>
-    <p>We accept M-Pesa, bank transfer and cheque. Payment details are shared on WhatsApp. Institution payment terms are agreed on WhatsApp.</p>
-  </div>
-</section>
-
-<hr class="tear">
-<section id="reviews" class="tint">
+<section id="reviews">
   <div class="wrap">
     <h2>Customer reviews</h2>
+
     <blockquote>
-      <p>“I have been buying my tissues from them for a while now, mostly in bulk. Prices are fair and the rolls are decent quality, better than some of the cheaper ones I've tried. Staff are friendly and they sort you out quickly. Good option if you're around the area.”</p>
-      <cite>★★★★★ Vic, Google review</cite>
+      <p>&ldquo;I have been buying my tissues from them for a while now, mostly in bulk. Prices are fair and the rolls are decent quality, better than some of the cheaper ones I've tried. Staff are friendly and they sort you out quickly. Good option if you're around the area.&rdquo;</p>
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="cite">Vic, Google review</div>
     </blockquote>
+
     <blockquote>
-      <p>“Reliable delivery and good wholesale prices.”</p>
-      <cite>★★★★★ Maskani Rolls, Google review</cite>
+      <p>&ldquo;Reliable delivery and good wholesale prices.&rdquo;</p>
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="cite">Maskani Rolls, Google review</div>
     </blockquote>
-    <p class="note"><a href="https://share.google/9RMhAJ2K7Horli2F1" rel="noopener">See more reviews on Google</a></p>
+
+    <p><a href="https://share.google/9RMhAJ2K7Horli2F1">See more reviews on Google</a></p>
   </div>
 </section>
-</main>
 
 <footer>
-  <div class="wrap">© Jansoo Afrik · <a href="https://share.google/9RMhAJ2K7Horli2F1" rel="noopener">Old York Road, Mutuini, Dagoretti South, Nairobi</a></div>
+  <div class="wrap">
+    <div class="foot-icons">
+      <a href="https://wa.me/254753441871?text=Hello%20Jansoo%20Afrik%2C%20I%27d%20like%20to%20place%20an%20order." aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 2a8 8 0 0 1 6.9 12.1l-.3.5.6 2.3-2.4-.6-.5.3A8 8 0 1 1 12 4Zm-3.4 4.1c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.1 0 1.3.9 2.5 1 2.7.2.2 1.8 2.8 4.4 3.8 2.2.9 2.6.7 3.1.6.5 0 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3l-1.9-.9c-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.5-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6l-.9-2c-.2-.5-.4-.4-.6-.4Z"/></svg>
+      </a>
+      <a href="tel:+254753441871" aria-label="Call">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.7 3.6 5 6.3 6.3l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.6c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1L6.6 10.8Z"/></svg>
+      </a>
+      <a href="mailto:jansooafrik@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm1.5 2 7 5.5L18.5 7H4.5ZM2 8.2V18h20V8.2l-8.4 6.6a1 1 0 0 1-1.2 0L2 8.2Z"/></svg>
+      </a>
+    </div>
+    <p class="foot-products">Toilet tissue, kitchen towels &amp; serviettes</p>
+  </div>
 </footer>
 
 </body>
